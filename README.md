@@ -31,17 +31,16 @@ Better yet, you can use the provided Python script to re-generate these in a mor
 
 ## Steps to re-generate Java SDK
 
-You can use the provided [generate_java_sdk.py](https://github.com/wwwTOMKOca/amazon-sp-api/src/main/resources/generate_java_sdk.py) script to re-generate all the files provided here (such as when Amazon updates their API)
+You can use the provided [generate_java_sdk.py](https://github.com/wwwTOMKOca/amazon-sp-api/blob/main/src/main/resources/generate_java_sdk.py) script to re-generate all the files provided here (such as when Amazon updates their API)
 
 Steps to re-generate all classes:
 
 * Prep required files
- * Either use provided [swagger-codegen-cli.jar](https://github.com/wwwTOMKOca/amazon-sp-api/src/main/resources/) tool, or download latest version from [swagger-codegen](https://swagger.io/tools/swagger-codegen/) to `/src/main/resources`
- * Clone the latest [selling-partner-api-models](https://github.com/amzn/selling-partner-api-models) to `/src/main/resources` with `git clone https://github.com/amzn/selling-partner-api-models.git`. These models will be used to generate classes
+   * Either use provided [swagger-codegen-cli.jar](https://github.com/wwwTOMKOca/amazon-sp-api/blob/main/src/main/resources/swagger-codegen-cli.jar) tool, or download latest version from [swagger-codegen](https://swagger.io/tools/swagger-codegen/) to `/src/main/resources`
+   * Clone the latest [selling-partner-api-models](https://github.com/amzn/selling-partner-api-models) to `/src/main/resources` with `git clone https://github.com/amzn/selling-partner-api-models.git`. These models will be used to generate classes 
 * Run the python script
- * In terminal session cd into the resources dir `cd src/main/resources`
- * Run the [generate_java_sdk.py](https://github.com/wwwTOMKOca/amazon-sp-api/src/main/resources/generate_java_sdk.py) script: 
-   * `python3 generate_java_sdk.py`
- * Script should automatically update all the required files in this project and place them properly 
-
+   * In terminal session cd into the resources dir `cd src/main/resources`
+   * Run the [generate_java_sdk.py](https://github.com/wwwTOMKOca/amazon-sp-api/blob/main/src/main/resources/generate_java_sdk.py) script: 
+     * `python3 generate_java_sdk.py`
+   * Script should automatically update all the required files in this project and place them properly 
 
