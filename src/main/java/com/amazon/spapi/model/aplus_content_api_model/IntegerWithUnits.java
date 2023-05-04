@@ -28,7 +28,7 @@ import java.io.IOException;
  * A whole number dimension and its unit of measurement. For example, this can represent 100 pixels.
  */
 @ApiModel(description = "A whole number dimension and its unit of measurement. For example, this can represent 100 pixels.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:03.792-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:46.835-04:00")
 public class IntegerWithUnits {
   @SerializedName("value")
   private Integer value = null;

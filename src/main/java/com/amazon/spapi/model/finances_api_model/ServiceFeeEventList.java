@@ -24,7 +24,7 @@ import java.util.List;
  * A list of information about service fee events.
  */
 @ApiModel(description = "A list of information about service fee events.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:06.303-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:49.377-04:00")
 public class ServiceFeeEventList extends ArrayList<ServiceFeeEvent> {
 
   @Override

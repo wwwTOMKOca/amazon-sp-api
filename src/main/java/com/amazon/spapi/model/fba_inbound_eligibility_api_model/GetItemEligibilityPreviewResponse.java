@@ -30,7 +30,7 @@ import java.io.IOException;
  * The response schema for the getItemEligibilityPreview operation.
  */
 @ApiModel(description = "The response schema for the getItemEligibilityPreview operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:05.895-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:48.973-04:00")
 public class GetItemEligibilityPreviewResponse {
   @SerializedName("payload")
   private ItemEligibilityPreview payload = null;

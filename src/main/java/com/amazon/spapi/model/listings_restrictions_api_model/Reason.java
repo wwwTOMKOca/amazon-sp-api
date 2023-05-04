@@ -31,7 +31,7 @@ import java.util.List;
  * A reason for the restriction, including path forward links that may allow Selling Partners to remove the restriction, if available.
  */
 @ApiModel(description = "A reason for the restriction, including path forward links that may allow Selling Partners to remove the restriction, if available.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:02.627-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:45.724-04:00")
 public class Reason {
   @SerializedName("message")
   private String message = null;

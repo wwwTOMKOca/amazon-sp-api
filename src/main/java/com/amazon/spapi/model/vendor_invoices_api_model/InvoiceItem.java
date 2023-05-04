@@ -36,7 +36,7 @@ import java.util.List;
  * Details of the item being invoiced.
  */
 @ApiModel(description = "Details of the item being invoiced.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:56.071-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:39.230-04:00")
 public class InvoiceItem {
   @SerializedName("itemSequenceNumber")
   private Integer itemSequenceNumber = null;

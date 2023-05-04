@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
  * Properties of packages
  */
 @ApiModel(description = "Properties of packages")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:01.520-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:44.667-04:00")
 public class PackageDetail {
   @SerializedName("packageReferenceId")
   private String packageReferenceId = null;

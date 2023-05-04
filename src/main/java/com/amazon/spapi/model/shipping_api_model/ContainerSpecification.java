@@ -30,7 +30,7 @@ import java.io.IOException;
  * Container specification for checking the service rate.
  */
 @ApiModel(description = "Container specification for checking the service rate.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:10.750-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:53.947-04:00")
 public class ContainerSpecification {
   @SerializedName("dimensions")
   private Dimensions dimensions = null;

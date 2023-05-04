@@ -29,7 +29,7 @@ import java.io.IOException;
 /**
  * GetMyFeesEstimateResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:55.119-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:38.222-04:00")
 public class GetMyFeesEstimateResponse {
   @SerializedName("payload")
   private GetMyFeesEstimateResult payload = null;

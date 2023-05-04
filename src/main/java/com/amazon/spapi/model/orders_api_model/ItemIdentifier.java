@@ -28,7 +28,7 @@ import java.io.IOException;
  * Item identifiers used in the context of approvals operations.
  */
 @ApiModel(description = "Item identifiers used in the context of approvals operations.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:01.520-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:44.667-04:00")
 public class ItemIdentifier {
   /**
    * Defines the type of identifiers allowed to specify a substitution.

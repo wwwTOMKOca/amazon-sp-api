@@ -39,7 +39,7 @@ import java.util.List;
  * General information about a fulfillment order, including its status.
  */
 @ApiModel(description = "General information about a fulfillment order, including its status.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:52.634-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:35.643-04:00")
 public class FulfillmentOrder {
   @SerializedName("sellerFulfillmentOrderId")
   private String sellerFulfillmentOrderId = null;

@@ -31,7 +31,7 @@ import java.io.IOException;
  * Summarized inventory details. This object will not appear if the details parameter in the request is false.
  */
 @ApiModel(description = "Summarized inventory details. This object will not appear if the details parameter in the request is false.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:10.276-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:53.424-04:00")
 public class InventoryDetails {
   @SerializedName("fulfillableQuantity")
   private Integer fulfillableQuantity = null;

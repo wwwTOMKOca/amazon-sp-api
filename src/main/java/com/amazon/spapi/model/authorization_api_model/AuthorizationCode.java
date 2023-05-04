@@ -28,7 +28,7 @@ import java.io.IOException;
  * A Login with Amazon (LWA) authorization code.
  */
 @ApiModel(description = "A Login with Amazon (LWA) authorization code.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:58.972-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:42.078-04:00")
 public class AuthorizationCode {
   @SerializedName("authorizationCode")
   private String authorizationCode = null;

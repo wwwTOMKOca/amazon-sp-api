@@ -32,7 +32,7 @@ import java.io.IOException;
  * Labeling requirements and item preparation instructions to help you prepare items for shipment to Amazon&#39;s fulfillment network.
  */
 @ApiModel(description = "Labeling requirements and item preparation instructions to help you prepare items for shipment to Amazon's fulfillment network.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:54.337-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:37.437-04:00")
 public class SKUPrepInstructions {
   @SerializedName("SellerSKU")
   private String sellerSKU = null;

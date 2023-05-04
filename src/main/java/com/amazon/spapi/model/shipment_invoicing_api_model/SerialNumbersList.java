@@ -23,7 +23,7 @@ import java.util.List;
  * The list of serial numbers.
  */
 @ApiModel(description = "The list of serial numbers.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:04.962-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:48.038-04:00")
 public class SerialNumbersList extends ArrayList<String> {
 
   @Override

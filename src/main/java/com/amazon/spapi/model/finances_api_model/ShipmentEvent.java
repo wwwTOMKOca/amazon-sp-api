@@ -32,7 +32,7 @@ import java.io.IOException;
  * A shipment, refund, guarantee claim, or chargeback.
  */
 @ApiModel(description = "A shipment, refund, guarantee claim, or chargeback.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:06.303-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:49.377-04:00")
 public class ShipmentEvent {
   @SerializedName("AmazonOrderId")
   private String amazonOrderId = null;

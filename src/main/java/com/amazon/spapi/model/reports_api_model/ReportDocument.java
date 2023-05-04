@@ -28,7 +28,7 @@ import java.io.IOException;
  * Information required for the report document.
  */
 @ApiModel(description = "Information required for the report document.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:59.929-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:43.045-04:00")
 public class ReportDocument {
   @SerializedName("reportDocumentId")
   private String reportDocumentId = null;

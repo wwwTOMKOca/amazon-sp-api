@@ -32,7 +32,7 @@ import java.io.IOException;
  * A notificationType specific filter. This object contains all of the currently available filters and properties that you can use to define a notificationType specific filter.
  */
 @ApiModel(description = "A notificationType specific filter. This object contains all of the currently available filters and properties that you can use to define a notificationType specific filter.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:08.356-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:51.459-04:00")
 public class EventFilter extends AggregationFilter {
   @SerializedName("marketplaceIds")
   private MarketplaceIds marketplaceIds = null;

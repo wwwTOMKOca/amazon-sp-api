@@ -28,7 +28,7 @@ import java.io.IOException;
  * Gift details for the item.
  */
 @ApiModel(description = "Gift details for the item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:52.092-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:35.089-04:00")
 public class GiftDetails {
   @SerializedName("giftMessage")
   private String giftMessage = null;

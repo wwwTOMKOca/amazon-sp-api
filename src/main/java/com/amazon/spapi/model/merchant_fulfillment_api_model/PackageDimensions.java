@@ -31,7 +31,7 @@ import java.math.BigDecimal;
  * The dimensions of a package contained in a shipment.
  */
 @ApiModel(description = "The dimensions of a package contained in a shipment.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:00.796-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:43.924-04:00")
 public class PackageDimensions {
   @SerializedName("Length")
   private BigDecimal length = null;

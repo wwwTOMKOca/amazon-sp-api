@@ -30,7 +30,7 @@ import java.io.IOException;
  * A single item&#39;s buyer information.
  */
 @ApiModel(description = "A single item's buyer information.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:01.520-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:44.667-04:00")
 public class ItemBuyerInfo {
   @SerializedName("BuyerCustomizedInfo")
   private BuyerCustomizedInfoDetail buyerCustomizedInfo = null;

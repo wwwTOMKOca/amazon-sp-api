@@ -24,7 +24,7 @@ import java.util.List;
  * A list of information about taxes withheld.
  */
 @ApiModel(description = "A list of information about taxes withheld.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:06.303-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:49.377-04:00")
 public class TaxWithheldComponentList extends ArrayList<TaxWithheldComponent> {
 
   @Override

@@ -29,7 +29,7 @@ import java.io.IOException;
  * The label format details and whether to include a packing slip.
  */
 @ApiModel(description = "The label format details and whether to include a packing slip.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:00.796-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:43.924-04:00")
 public class LabelFormatOption {
   @SerializedName("IncludePackingSlipWithLabel")
   private Boolean includePackingSlipWithLabel = null;

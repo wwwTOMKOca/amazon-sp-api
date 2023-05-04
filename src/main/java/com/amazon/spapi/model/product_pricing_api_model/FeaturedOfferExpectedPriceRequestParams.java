@@ -28,7 +28,7 @@ import java.io.IOException;
  * The parameters for an individual request.
  */
 @ApiModel(description = "The parameters for an individual request.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:58.021-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:41.182-04:00")
 public class FeaturedOfferExpectedPriceRequestParams {
   @SerializedName("marketplaceId")
   private String marketplaceId = null;

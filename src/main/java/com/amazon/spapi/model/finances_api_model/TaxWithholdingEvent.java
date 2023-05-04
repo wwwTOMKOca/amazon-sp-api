@@ -30,7 +30,7 @@ import java.io.IOException;
  * A TaxWithholding event on seller&#39;s account.
  */
 @ApiModel(description = "A TaxWithholding event on seller's account.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:06.303-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:49.377-04:00")
 public class TaxWithholdingEvent {
   @SerializedName("PostedDate")
   private String postedDate = null;

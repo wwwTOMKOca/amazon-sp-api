@@ -24,7 +24,7 @@ import java.util.List;
  * An array of delivery windows.
  */
 @ApiModel(description = "An array of delivery windows.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:52.634-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:35.643-04:00")
 public class DeliveryWindowList extends ArrayList<DeliveryWindow> {
 
   @Override

@@ -29,7 +29,7 @@ import java.io.IOException;
  * An event related to a value added service charge.
  */
 @ApiModel(description = "An event related to a value added service charge.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:06.303-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:49.377-04:00")
 public class ValueAddedServiceChargeEventList {
   @SerializedName("TransactionType")
   private String transactionType = null;

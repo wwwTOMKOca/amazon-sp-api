@@ -32,7 +32,7 @@ import java.util.List;
  * The A+ Content standard comparison product block.
  */
 @ApiModel(description = "The A+ Content standard comparison product block.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:03.792-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:46.835-04:00")
 public class StandardComparisonProductBlock {
   @SerializedName("position")
   private Integer position = null;

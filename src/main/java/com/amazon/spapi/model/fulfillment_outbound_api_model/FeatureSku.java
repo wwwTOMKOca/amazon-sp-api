@@ -31,7 +31,7 @@ import java.util.List;
  * Information about an SKU, including the count available, identifiers, and a list of overlapping SKUs that share the same inventory pool.
  */
 @ApiModel(description = "Information about an SKU, including the count available, identifiers, and a list of overlapping SKUs that share the same inventory pool.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:52.634-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:35.643-04:00")
 public class FeatureSku {
   @SerializedName("sellerSku")
   private String sellerSku = null;

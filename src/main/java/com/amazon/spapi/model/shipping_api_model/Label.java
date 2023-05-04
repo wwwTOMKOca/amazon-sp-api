@@ -29,7 +29,7 @@ import java.io.IOException;
  * The label details of the container.
  */
 @ApiModel(description = "The label details of the container.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:10.750-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:53.947-04:00")
 public class Label {
   @SerializedName("labelStream")
   private String labelStream = null;

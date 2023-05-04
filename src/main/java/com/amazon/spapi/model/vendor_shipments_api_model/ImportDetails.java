@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * ImportDetails
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:08.878-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:51.985-04:00")
 public class ImportDetails {
   /**
    * This is used for import purchase orders only. If the recipient requests, this field will contain the shipment method of payment.

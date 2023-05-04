@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Details for the shipment status update given by the vendor for the specific package.
  */
 @ApiModel(description = "Details for the shipment status update given by the vendor for the specific package.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:07.786-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:50.884-04:00")
 public class StatusUpdateDetails {
   @SerializedName("trackingNumber")
   private String trackingNumber = null;

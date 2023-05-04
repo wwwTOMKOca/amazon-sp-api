@@ -29,7 +29,7 @@ import java.io.IOException;
  * The request schema for the createSubscription operation.
  */
 @ApiModel(description = "The request schema for the createSubscription operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:08.356-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:51.459-04:00")
 public class CreateSubscriptionRequest {
   @SerializedName("payloadVersion")
   private String payloadVersion = null;

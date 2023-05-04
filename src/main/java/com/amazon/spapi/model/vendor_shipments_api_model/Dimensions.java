@@ -28,7 +28,7 @@ import java.io.IOException;
  * Physical dimensional measurements of a container.
  */
 @ApiModel(description = "Physical dimensional measurements of a container.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:08.878-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:51.985-04:00")
 public class Dimensions {
   @SerializedName("length")
   private String length = null;

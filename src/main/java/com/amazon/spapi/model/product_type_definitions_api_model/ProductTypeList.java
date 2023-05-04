@@ -31,7 +31,7 @@ import java.util.List;
  * A list of Amazon product types with definitions available.
  */
 @ApiModel(description = "A list of Amazon product types with definitions available.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:09.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:53.024-04:00")
 public class ProductTypeList {
   @SerializedName("productTypes")
   private List<ProductType> productTypes = new ArrayList<ProductType>();

@@ -30,7 +30,7 @@ import java.util.List;
  * An issue with a listings item.
  */
 @ApiModel(description = "An issue with a listings item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:11.747-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:55.009-04:00")
 public class Issue {
   @SerializedName("code")
   private String code = null;

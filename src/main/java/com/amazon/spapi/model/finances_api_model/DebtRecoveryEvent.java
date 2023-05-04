@@ -31,7 +31,7 @@ import java.io.IOException;
  * A debt payment or debt adjustment.
  */
 @ApiModel(description = "A debt payment or debt adjustment.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:06.303-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:49.377-04:00")
 public class DebtRecoveryEvent {
   @SerializedName("DebtRecoveryType")
   private String debtRecoveryType = null;

@@ -29,7 +29,7 @@ import java.io.IOException;
  * The error response schema for the &#x60;getFixedSlotCapacity&#x60; operation.
  */
 @ApiModel(description = "The error response schema for the `getFixedSlotCapacity` operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:03.079-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:46.175-04:00")
 public class FixedSlotCapacityErrors {
   @SerializedName("errors")
   private ErrorList errors = null;

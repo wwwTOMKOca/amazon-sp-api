@@ -30,7 +30,7 @@ import java.io.IOException;
  * Response schema.
  */
 @ApiModel(description = "Response schema.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:00.796-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:43.924-04:00")
 public class CancelShipmentResponse {
   @SerializedName("payload")
   private Shipment payload = null;

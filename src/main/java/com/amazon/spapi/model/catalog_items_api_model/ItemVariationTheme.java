@@ -30,7 +30,7 @@ import java.util.List;
  * Variation theme indicating the combination of Amazon item catalog attributes that define the variation family.
  */
 @ApiModel(description = "Variation theme indicating the combination of Amazon item catalog attributes that define the variation family.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:04.460-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:47.498-04:00")
 public class ItemVariationTheme {
   @SerializedName("attributes")
   private List<String> attributes = null;

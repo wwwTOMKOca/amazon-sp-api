@@ -28,7 +28,7 @@ import java.io.IOException;
  * Description of a brand that can be used to get more fine-grained search results.
  */
 @ApiModel(description = "Description of a brand that can be used to get more fine-grained search results.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:04.460-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:47.498-04:00")
 public class BrandRefinement {
   @SerializedName("numberOfResults")
   private Integer numberOfResults = null;

@@ -24,7 +24,7 @@ import java.util.List;
  * A set of content decorators.
  */
 @ApiModel(description = "A set of content decorators.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:03.792-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:46.835-04:00")
 public class DecoratorSet extends ArrayList<Decorator> {
 
   @Override

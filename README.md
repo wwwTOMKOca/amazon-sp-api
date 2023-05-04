@@ -33,3 +33,16 @@ Follow these steps to regenerate all classes:
    - Run the [generate_java_sdk.py](https://github.com/wwwTOMKOca/amazon-sp-api/blob/main/src/main/resources/generate_java_sdk.py) script: `python3 generate_java_sdk.py`.
    - The script should automatically update all the required files in this project and place them properly.
 
+   
+### Other Notes and Issues
+
+Swagger Codegen may not handle the `additionalProperties` field correctly in some of the provided JSON schemas. This can result in objects with type `ERRORUNKNOWN`, causing issues in some of the generated Java SDK files.
+
+This issue currently affects only these files:
+
+- model/**listings_items_api_model**/ListingsItemPutRequest.java
+- model/**listings_items_api_model**/ItemAttributes.java
+- model/**listings_items_api_model**/PatchOperation.java
+- model/**catalog_items_api_model**/ItemAttributes.java
+
+These files have been manually fixed in the meantime. If anyone has a solution or workaround for this issue, please feel free to contribute or notify me. The issue may be related to outdated or incomplete models provided by Amazon.

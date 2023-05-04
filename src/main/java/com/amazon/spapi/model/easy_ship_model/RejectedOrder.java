@@ -29,7 +29,7 @@ import java.io.IOException;
  * A order which we couldn&#39;t schedule on your behalf. It contains its id, and information on the error.
  */
 @ApiModel(description = "A order which we couldn't schedule on your behalf. It contains its id, and information on the error.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:59.384-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:42.498-04:00")
 public class RejectedOrder {
   @SerializedName("amazonOrderId")
   private String amazonOrderId = null;

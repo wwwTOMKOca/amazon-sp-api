@@ -24,7 +24,7 @@ import java.util.List;
  * Product types associated with the Amazon catalog item.
  */
 @ApiModel(description = "Product types associated with the Amazon catalog item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:04.460-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:47.498-04:00")
 public class ItemProductTypes extends ArrayList<ItemProductTypeByMarketplace> {
 
   @Override

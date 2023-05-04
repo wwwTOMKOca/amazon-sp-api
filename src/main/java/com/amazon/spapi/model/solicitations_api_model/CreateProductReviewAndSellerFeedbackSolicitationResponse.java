@@ -29,7 +29,7 @@ import java.io.IOException;
  * The response schema for the createProductReviewAndSellerFeedbackSolicitation operation.
  */
 @ApiModel(description = "The response schema for the createProductReviewAndSellerFeedbackSolicitation operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:56.578-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:39.730-04:00")
 public class CreateProductReviewAndSellerFeedbackSolicitationResponse {
   @SerializedName("errors")
   private ErrorList errors = null;

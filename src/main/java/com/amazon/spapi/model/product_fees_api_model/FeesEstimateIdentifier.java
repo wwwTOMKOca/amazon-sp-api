@@ -31,7 +31,7 @@ import java.io.IOException;
  * An item identifier, marketplace, time of request, and other details that identify an estimate.
  */
 @ApiModel(description = "An item identifier, marketplace, time of request, and other details that identify an estimate.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:55.119-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:38.222-04:00")
 public class FeesEstimateIdentifier {
   @SerializedName("MarketplaceId")
   private String marketplaceId = null;

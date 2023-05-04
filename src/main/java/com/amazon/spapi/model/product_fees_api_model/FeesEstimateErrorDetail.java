@@ -23,7 +23,7 @@ import java.util.List;
  * Additional information that can help the caller understand or fix the issue.
  */
 @ApiModel(description = "Additional information that can help the caller understand or fix the issue.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:55.119-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:38.222-04:00")
 public class FeesEstimateErrorDetail extends ArrayList<Object> {
 
   @Override

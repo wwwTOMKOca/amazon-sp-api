@@ -30,7 +30,7 @@ import java.math.BigDecimal;
  * The monetary value.
  */
 @ApiModel(description = "The monetary value.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:54.337-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:37.437-04:00")
 public class Amount {
   @SerializedName("CurrencyCode")
   private CurrencyCode currencyCode = null;

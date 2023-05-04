@@ -30,7 +30,7 @@ import java.io.IOException;
  * Item information for creating an inbound shipment plan. Submitted with a call to the createInboundShipmentPlan operation.
  */
 @ApiModel(description = "Item information for creating an inbound shipment plan. Submitted with a call to the createInboundShipmentPlan operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:54.337-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:37.437-04:00")
 public class InboundShipmentPlanRequestItem {
   @SerializedName("SellerSKU")
   private String sellerSKU = null;

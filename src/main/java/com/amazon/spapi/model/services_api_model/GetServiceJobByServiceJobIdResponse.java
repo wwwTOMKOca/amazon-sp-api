@@ -30,7 +30,7 @@ import java.io.IOException;
  * The response schema for the &#x60;getServiceJobByServiceJobId&#x60; operation.
  */
 @ApiModel(description = "The response schema for the `getServiceJobByServiceJobId` operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:03.079-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:46.175-04:00")
 public class GetServiceJobByServiceJobIdResponse {
   @SerializedName("payload")
   private ServiceJob payload = null;

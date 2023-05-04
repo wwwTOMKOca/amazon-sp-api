@@ -33,7 +33,7 @@ import java.util.List;
  * The fee estimate for a specific item.
  */
 @ApiModel(description = "The fee estimate for a specific item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:05.441-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:48.533-04:00")
 public class FeePreview {
   @SerializedName("asin")
   private String asin = null;

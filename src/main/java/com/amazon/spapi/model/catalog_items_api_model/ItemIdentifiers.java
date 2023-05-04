@@ -24,7 +24,7 @@ import java.util.List;
  * Identifiers associated with the item in the Amazon catalog, such as UPC and EAN identifiers.
  */
 @ApiModel(description = "Identifiers associated with the item in the Amazon catalog, such as UPC and EAN identifiers.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:04.460-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:47.498-04:00")
 public class ItemIdentifiers extends ArrayList<ItemIdentifiersByMarketplace> {
 
   @Override

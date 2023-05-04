@@ -36,7 +36,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * InvoiceDetail
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:53.322-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:36.378-04:00")
 public class InvoiceDetail {
   @SerializedName("invoiceNumber")
   private String invoiceNumber = null;

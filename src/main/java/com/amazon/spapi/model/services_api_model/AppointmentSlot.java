@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * A time window along with associated capacity in which the service can be performed.
  */
 @ApiModel(description = "A time window along with associated capacity in which the service can be performed.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:03.079-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:46.175-04:00")
 public class AppointmentSlot {
   @SerializedName("startTime")
   private OffsetDateTime startTime = null;

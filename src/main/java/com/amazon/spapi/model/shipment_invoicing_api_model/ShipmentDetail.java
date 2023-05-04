@@ -34,7 +34,7 @@ import org.threeten.bp.OffsetDateTime;
  * The information required by a selling partner to issue a shipment invoice.
  */
 @ApiModel(description = "The information required by a selling partner to issue a shipment invoice.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:04.962-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:48.038-04:00")
 public class ShipmentDetail {
   @SerializedName("WarehouseId")
   private String warehouseId = null;

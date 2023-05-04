@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * BillOfLadingDownloadURL
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:54.337-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:37.437-04:00")
 public class BillOfLadingDownloadURL {
   @SerializedName("DownloadURL")
   private String downloadURL = null;

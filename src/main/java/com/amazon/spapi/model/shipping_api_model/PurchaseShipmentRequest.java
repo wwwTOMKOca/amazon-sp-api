@@ -33,7 +33,7 @@ import org.threeten.bp.OffsetDateTime;
  * The payload schema for the purchaseShipment operation.
  */
 @ApiModel(description = "The payload schema for the purchaseShipment operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:10.750-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:53.947-04:00")
 public class PurchaseShipmentRequest {
   @SerializedName("clientReferenceId")
   private String clientReferenceId = null;

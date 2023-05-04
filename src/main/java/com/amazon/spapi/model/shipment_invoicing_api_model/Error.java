@@ -28,7 +28,7 @@ import java.io.IOException;
  * An error response returned when the request is unsuccessful.
  */
 @ApiModel(description = "An error response returned when the request is unsuccessful.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:04.962-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:48.038-04:00")
 public class Error {
   @SerializedName("code")
   private String code = null;

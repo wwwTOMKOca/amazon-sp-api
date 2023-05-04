@@ -15,7 +15,6 @@ package com.amazon.spapi.model.listings_items_api_model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.amazon.spapi.model.listings_items_api_model.ERRORUNKNOWN;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -26,13 +25,12 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Individual JSON Patch operation for an HTTP PATCH request.
  */
 @ApiModel(description = "Individual JSON Patch operation for an HTTP PATCH request.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:11.747-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:55.009-04:00")
 public class PatchOperation {
   /**
    * Type of JSON Patch operation. Supported JSON Patch operations include add, replace, and delete. See &lt;https://tools.ietf.org/html/rfc6902&gt;.
@@ -90,7 +88,7 @@ public class PatchOperation {
   private String path = null;
 
   @SerializedName("value")
-  private List<Map<String, ERRORUNKNOWN>> value = null;
+  private List<Object> value = null;
 
   public PatchOperation op(OpEnum op) {
     this.op = op;
@@ -128,14 +126,14 @@ public class PatchOperation {
     this.path = path;
   }
 
-  public PatchOperation value(List<Map<String, ERRORUNKNOWN>> value) {
+  public PatchOperation value(List<Object> value) {
     this.value = value;
     return this;
   }
 
-  public PatchOperation addValueItem(Map<String, ERRORUNKNOWN> valueItem) {
+  public PatchOperation addValueItem(Object valueItem) {
     if (this.value == null) {
-      this.value = new ArrayList<Map<String, ERRORUNKNOWN>>();
+      this.value = new ArrayList<Object>();
     }
     this.value.add(valueItem);
     return this;
@@ -146,17 +144,17 @@ public class PatchOperation {
    * @return value
   **/
   @ApiModelProperty(value = "JSON value to add, replace, or delete.")
-  public List<Map<String, ERRORUNKNOWN>> getValue() {
+  public List<Object> getValue() {
     return value;
   }
 
-  public void setValue(List<Map<String, ERRORUNKNOWN>> value) {
+  public void setValue(List<Object> value) {
     this.value = value;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -191,7 +189,7 @@ public class PatchOperation {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }
@@ -199,4 +197,3 @@ public class PatchOperation {
   }
 
 }
-

@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Detailed information about the report.
  */
 @ApiModel(description = "Detailed information about the report.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:59.929-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:43.045-04:00")
 public class Report {
   @SerializedName("marketplaceIds")
   private List<String> marketplaceIds = null;

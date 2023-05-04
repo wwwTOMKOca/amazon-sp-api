@@ -30,7 +30,7 @@ import java.io.IOException;
  * The response schema for the getTransportDetails operation.
  */
 @ApiModel(description = "The response schema for the getTransportDetails operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:54.337-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:37.437-04:00")
 public class GetTransportDetailsResponse {
   @SerializedName("payload")
   private GetTransportDetailsResult payload = null;

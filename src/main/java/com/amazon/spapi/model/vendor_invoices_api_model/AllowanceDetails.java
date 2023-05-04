@@ -32,7 +32,7 @@ import java.util.List;
  * Monetary and tax details of the allowance.
  */
 @ApiModel(description = "Monetary and tax details of the allowance.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:56.071-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:39.230-04:00")
 public class AllowanceDetails {
   /**
    * Type of the allowance applied.

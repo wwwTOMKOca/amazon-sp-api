@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Input for fulfillment time details
  */
 @ApiModel(description = "Input for fulfillment time details")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:03.079-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:46.175-04:00")
 public class FulfillmentTime {
   @SerializedName("startTime")
   private OffsetDateTime startTime = null;

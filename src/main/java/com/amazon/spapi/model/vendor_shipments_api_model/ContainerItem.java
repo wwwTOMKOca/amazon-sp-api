@@ -30,7 +30,7 @@ import java.io.IOException;
  * Carton/Pallet level details for the item.
  */
 @ApiModel(description = "Carton/Pallet level details for the item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:08.878-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:51.985-04:00")
 public class ContainerItem {
   @SerializedName("itemReference")
   private String itemReference = null;

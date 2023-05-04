@@ -30,7 +30,7 @@ import java.io.IOException;
  * A content document with additional information for content management.
  */
 @ApiModel(description = "A content document with additional information for content management.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:03.792-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:46.835-04:00")
 public class ContentRecord {
   @SerializedName("contentReferenceKey")
   private String contentReferenceKey = null;
