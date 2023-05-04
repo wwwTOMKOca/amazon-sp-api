@@ -29,7 +29,7 @@ import java.io.IOException;
  * A loan advance, loan payment, or loan refund.
  */
 @ApiModel(description = "A loan advance, loan payment, or loan refund.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:24.430-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:06.303-04:00")
 public class LoanServicingEvent {
   @SerializedName("LoanAmount")
   private Currency loanAmount = null;

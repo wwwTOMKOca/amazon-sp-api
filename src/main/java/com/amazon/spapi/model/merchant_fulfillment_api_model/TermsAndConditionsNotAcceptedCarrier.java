@@ -28,7 +28,7 @@ import java.io.IOException;
  * A carrier whose terms and conditions have not been accepted by the seller.
  */
 @ApiModel(description = "A carrier whose terms and conditions have not been accepted by the seller.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:26.282-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:00.796-04:00")
 public class TermsAndConditionsNotAcceptedCarrier {
   @SerializedName("CarrierName")
   private String carrierName = null;

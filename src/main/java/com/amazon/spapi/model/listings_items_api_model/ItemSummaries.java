@@ -24,7 +24,7 @@ import java.util.List;
  * Summary details of a listings item.
  */
 @ApiModel(description = "Summary details of a listings item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:38.033-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:11.747-04:00")
 public class ItemSummaries extends ArrayList<ItemSummaryByMarketplace> {
 
   @Override

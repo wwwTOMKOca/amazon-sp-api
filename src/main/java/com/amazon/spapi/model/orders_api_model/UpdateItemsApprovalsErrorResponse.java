@@ -29,7 +29,7 @@ import java.io.IOException;
  * The error response schema for the updateOrderItemsApprovals operation.
  */
 @ApiModel(description = "The error response schema for the updateOrderItemsApprovals operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:28.341-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:01.520-04:00")
 public class UpdateItemsApprovalsErrorResponse {
   @SerializedName("errors")
   private ErrorList errors = null;

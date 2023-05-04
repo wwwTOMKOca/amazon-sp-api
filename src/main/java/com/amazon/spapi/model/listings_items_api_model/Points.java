@@ -28,7 +28,7 @@ import java.io.IOException;
  * The number of Amazon Points offered with the purchase of an item, and their monetary value. Note that the Points element is only returned in Japan (JP).
  */
 @ApiModel(description = "The number of Amazon Points offered with the purchase of an item, and their monetary value. Note that the Points element is only returned in Japan (JP).")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:38.033-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:11.747-04:00")
 public class Points {
   @SerializedName("pointsNumber")
   private Integer pointsNumber = null;

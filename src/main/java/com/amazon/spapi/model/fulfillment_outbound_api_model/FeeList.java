@@ -24,7 +24,7 @@ import java.util.List;
  * An array of fee type and cost pairs.
  */
 @ApiModel(description = "An array of fee type and cost pairs.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:40.067-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:52.634-04:00")
 public class FeeList extends ArrayList<Fee> {
 
   @Override

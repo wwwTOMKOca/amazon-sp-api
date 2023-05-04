@@ -30,7 +30,7 @@ import java.io.IOException;
  * An item that Amazon accepted for return.
  */
 @ApiModel(description = "An item that Amazon accepted for return.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:40.067-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:52.634-04:00")
 public class ReturnItem {
   @SerializedName("sellerReturnItemId")
   private String sellerReturnItemId = null;

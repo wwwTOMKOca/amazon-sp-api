@@ -31,7 +31,7 @@ import java.util.List;
  * The error response for when a request is unsuccessful.
  */
 @ApiModel(description = "The error response for when a request is unsuccessful.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:33.376-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:03.792-04:00")
 public class ErrorList {
   @SerializedName("errors")
   private List<Error> errors = new ArrayList<Error>();

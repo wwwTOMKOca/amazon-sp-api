@@ -32,7 +32,7 @@ import java.io.IOException;
  * An individual featured offer expected price request for a particular SKU.
  */
 @ApiModel(description = "An individual featured offer expected price request for a particular SKU.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:32.787-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:58.021-04:00")
 public class FeaturedOfferExpectedPriceRequest extends BatchRequest {
   @SerializedName("marketplaceId")
   private String marketplaceId = null;

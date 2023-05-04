@@ -29,7 +29,7 @@ import java.io.IOException;
  * Item identifier and serial number information.
  */
 @ApiModel(description = "Item identifier and serial number information.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:27.690-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:59.384-04:00")
 public class Item {
   @SerializedName("orderItemId")
   private String orderItemId = null;

@@ -28,7 +28,7 @@ import java.io.IOException;
  * The resource that performs or performed appointment fulfillment.
  */
 @ApiModel(description = "The resource that performs or performed appointment fulfillment.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:14.119-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:03.079-04:00")
 public class AppointmentResource {
   @SerializedName("resourceId")
   private String resourceId = null;

@@ -29,7 +29,7 @@ import java.io.IOException;
  * Additional information passed to the subscription to control the processing of notifications. For example, you can use an eventFilter to customize your subscription to send notifications for only the specified marketplaceId&#39;s, or select the aggregation time period at which to send notifications (e.g. limit to one notification every five minutes for high frequency notifications). The specific features available vary depending on the notificationType.  This feature is limited to specific notificationTypes and is currently only supported by the ANY_OFFER_CHANGED notificationType.
  */
 @ApiModel(description = "Additional information passed to the subscription to control the processing of notifications. For example, you can use an eventFilter to customize your subscription to send notifications for only the specified marketplaceId's, or select the aggregation time period at which to send notifications (e.g. limit to one notification every five minutes for high frequency notifications). The specific features available vary depending on the notificationType.  This feature is limited to specific notificationTypes and is currently only supported by the ANY_OFFER_CHANGED notificationType.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:29.080-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:08.356-04:00")
 public class ProcessingDirective {
   @SerializedName("eventFilter")
   private EventFilter eventFilter = null;

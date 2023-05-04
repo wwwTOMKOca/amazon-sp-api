@@ -28,7 +28,7 @@ import java.io.IOException;
  * The time range within which a Scheduled Delivery fulfillment order should be delivered. This is only available in the JP marketplace.
  */
 @ApiModel(description = "The time range within which a Scheduled Delivery fulfillment order should be delivered. This is only available in the JP marketplace.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:40.067-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:52.634-04:00")
 public class DeliveryWindow {
   @SerializedName("startDate")
   private String startDate = null;

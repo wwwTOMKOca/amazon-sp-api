@@ -31,7 +31,7 @@ import java.io.IOException;
  * Input for set appointment fulfillment data operation.
  */
 @ApiModel(description = "Input for set appointment fulfillment data operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:14.119-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:03.079-04:00")
 public class SetAppointmentFulfillmentDataRequest {
   @SerializedName("fulfillmentTime")
   private FulfillmentTime fulfillmentTime = null;

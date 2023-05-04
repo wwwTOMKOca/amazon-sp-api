@@ -29,7 +29,7 @@ import java.io.IOException;
  * Total tax details for the line item.
  */
 @ApiModel(description = "Total tax details for the line item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:35.417-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:52.092-04:00")
 public class TaxItemDetails {
   @SerializedName("taxLineItem")
   private TaxLineItem taxLineItem = null;

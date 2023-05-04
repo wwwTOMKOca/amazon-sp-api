@@ -29,7 +29,7 @@ import java.io.IOException;
  * The payload for the &#x60;assignAppointmentResource&#x60; operation.
  */
 @ApiModel(description = "The payload for the `assignAppointmentResource` operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:14.119-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:03.079-04:00")
 public class AssignAppointmentResourcesResponsePayload {
   @SerializedName("warnings")
   private WarningList warnings = null;

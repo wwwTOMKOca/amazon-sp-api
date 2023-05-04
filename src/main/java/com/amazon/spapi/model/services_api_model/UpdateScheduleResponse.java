@@ -32,7 +32,7 @@ import java.util.List;
  * Response schema for the &#x60;updateSchedule&#x60; operation.
  */
 @ApiModel(description = "Response schema for the `updateSchedule` operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:14.119-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:03.079-04:00")
 public class UpdateScheduleResponse {
   @SerializedName("payload")
   private List<UpdateScheduleRecord> payload = null;

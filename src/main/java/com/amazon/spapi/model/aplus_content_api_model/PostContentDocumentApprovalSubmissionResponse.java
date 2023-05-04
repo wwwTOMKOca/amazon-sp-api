@@ -29,7 +29,7 @@ import java.io.IOException;
 /**
  * PostContentDocumentApprovalSubmissionResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:33.376-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:03.792-04:00")
 public class PostContentDocumentApprovalSubmissionResponse extends AplusResponse {
   @SerializedName("warnings")
   private MessageSet warnings = null;

@@ -29,7 +29,7 @@ import java.io.IOException;
 /**
  * MarketplaceParticipation
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:30.732-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:07.369-04:00")
 public class MarketplaceParticipation {
   @SerializedName("marketplace")
   private Marketplace marketplace = null;

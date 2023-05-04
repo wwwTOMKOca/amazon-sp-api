@@ -30,7 +30,7 @@ import java.io.IOException;
  * The shipping address for the order.
  */
 @ApiModel(description = "The shipping address for the order.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:28.341-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:01.520-04:00")
 public class OrderAddress {
   @SerializedName("AmazonOrderId")
   private String amazonOrderId = null;

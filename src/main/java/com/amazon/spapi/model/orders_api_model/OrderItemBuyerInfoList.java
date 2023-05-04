@@ -24,7 +24,7 @@ import java.util.List;
  * A single order item&#39;s buyer information list.
  */
 @ApiModel(description = "A single order item's buyer information list.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:28.341-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:01.520-04:00")
 public class OrderItemBuyerInfoList extends ArrayList<OrderItemBuyerInfo> {
 
   @Override

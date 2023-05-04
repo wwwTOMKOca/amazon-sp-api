@@ -4,24 +4,24 @@ All URIs are relative to *https://sellingpartnerapi-na.amazon.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancelReport**](ReportsApi.md#cancelReport) | **DELETE** /reports/2020-09-04/reports/{reportId} | 
-[**cancelReportSchedule**](ReportsApi.md#cancelReportSchedule) | **DELETE** /reports/2020-09-04/schedules/{reportScheduleId} | 
-[**createReport**](ReportsApi.md#createReport) | **POST** /reports/2020-09-04/reports | 
-[**createReportSchedule**](ReportsApi.md#createReportSchedule) | **POST** /reports/2020-09-04/schedules | 
-[**getReport**](ReportsApi.md#getReport) | **GET** /reports/2020-09-04/reports/{reportId} | 
-[**getReportDocument**](ReportsApi.md#getReportDocument) | **GET** /reports/2020-09-04/documents/{reportDocumentId} | 
-[**getReportSchedule**](ReportsApi.md#getReportSchedule) | **GET** /reports/2020-09-04/schedules/{reportScheduleId} | 
-[**getReportSchedules**](ReportsApi.md#getReportSchedules) | **GET** /reports/2020-09-04/schedules | 
-[**getReports**](ReportsApi.md#getReports) | **GET** /reports/2020-09-04/reports | 
+[**cancelReport**](ReportsApi.md#cancelReport) | **DELETE** /reports/2021-06-30/reports/{reportId} | 
+[**cancelReportSchedule**](ReportsApi.md#cancelReportSchedule) | **DELETE** /reports/2021-06-30/schedules/{reportScheduleId} | 
+[**createReport**](ReportsApi.md#createReport) | **POST** /reports/2021-06-30/reports | 
+[**createReportSchedule**](ReportsApi.md#createReportSchedule) | **POST** /reports/2021-06-30/schedules | 
+[**getReport**](ReportsApi.md#getReport) | **GET** /reports/2021-06-30/reports/{reportId} | 
+[**getReportDocument**](ReportsApi.md#getReportDocument) | **GET** /reports/2021-06-30/documents/{reportDocumentId} | 
+[**getReportSchedule**](ReportsApi.md#getReportSchedule) | **GET** /reports/2021-06-30/schedules/{reportScheduleId} | 
+[**getReportSchedules**](ReportsApi.md#getReportSchedules) | **GET** /reports/2021-06-30/schedules | 
+[**getReports**](ReportsApi.md#getReports) | **GET** /reports/2021-06-30/reports | 
 
 
 <a name="cancelReport"></a>
 # **cancelReport**
-> CancelReportResponse cancelReport(reportId)
+> cancelReport(reportId)
 
 
 
-Effective **June 27, 2023**, the &#x60;cancelReport&#x60; operation will no longer be available in the Selling Partner API for Reports v2020-09-04 and all calls to it will fail. Integrations that rely on this operation should migrate to [Reports v2021-06-30](https://developer-docs.amazon.com/sp-api/docs/reports-api-v2021-06-30-reference) to avoid service disruption.
+Cancels the report that you specify. Only reports with processingStatus&#x3D;IN_QUEUE can be cancelled. Cancelled reports are returned in subsequent calls to the getReport and getReports operations.  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 0.0222 | 10 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
 
 ### Example
 ```java
@@ -33,8 +33,7 @@ Effective **June 27, 2023**, the &#x60;cancelReport&#x60; operation will no long
 ReportsApi apiInstance = new ReportsApi();
 String reportId = "reportId_example"; // String | The identifier for the report. This identifier is unique only in combination with a seller ID.
 try {
-    CancelReportResponse result = apiInstance.cancelReport(reportId);
-    System.out.println(result);
+    apiInstance.cancelReport(reportId);
 } catch (ApiException e) {
     System.err.println("Exception when calling ReportsApi#cancelReport");
     e.printStackTrace();
@@ -49,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CancelReportResponse**](CancelReportResponse.md)
+null (empty response body)
 
 ### Authorization
 
@@ -62,11 +61,11 @@ No authorization required
 
 <a name="cancelReportSchedule"></a>
 # **cancelReportSchedule**
-> CancelReportScheduleResponse cancelReportSchedule(reportScheduleId)
+> cancelReportSchedule(reportScheduleId)
 
 
 
-Effective **June 27, 2023**, the &#x60;cancelReportSchedule&#x60; operation will no longer be available in the Selling Partner API for Reports v2020-09-04 and all calls to it will fail. Integrations that rely on this operation should migrate to [Reports v2021-06-30](https://developer-docs.amazon.com/sp-api/docs/reports-api-v2021-06-30-reference) to avoid service disruption.
+Cancels the report schedule that you specify.  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 0.0222 | 10 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
 
 ### Example
 ```java
@@ -78,8 +77,7 @@ Effective **June 27, 2023**, the &#x60;cancelReportSchedule&#x60; operation will
 ReportsApi apiInstance = new ReportsApi();
 String reportScheduleId = "reportScheduleId_example"; // String | The identifier for the report schedule. This identifier is unique only in combination with a seller ID.
 try {
-    CancelReportScheduleResponse result = apiInstance.cancelReportSchedule(reportScheduleId);
-    System.out.println(result);
+    apiInstance.cancelReportSchedule(reportScheduleId);
 } catch (ApiException e) {
     System.err.println("Exception when calling ReportsApi#cancelReportSchedule");
     e.printStackTrace();
@@ -94,7 +92,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CancelReportScheduleResponse**](CancelReportScheduleResponse.md)
+null (empty response body)
 
 ### Authorization
 
@@ -111,7 +109,7 @@ No authorization required
 
 
 
-Effective **June 27, 2023**, the &#x60;createReport&#x60; operation will no longer be available in the Selling Partner API for Reports v2020-09-04 and all calls to it will fail. Integrations that rely on this operation should migrate to [Reports v2021-06-30](https://developer-docs.amazon.com/sp-api/docs/reports-api-v2021-06-30-reference) to avoid service disruption.
+Creates a report.  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 0.0167 | 15 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
 
 ### Example
 ```java
@@ -156,7 +154,7 @@ No authorization required
 
 
 
-Effective **June 27, 2023**, the &#x60;createReportSchedule&#x60; operation will no longer be available in the Selling Partner API for Reports v2020-09-04 and all calls to it will fail. Integrations that rely on this operation should migrate to [Reports v2021-06-30](https://developer-docs.amazon.com/sp-api/docs/reports-api-v2021-06-30-reference) to avoid service disruption.
+Creates a report schedule. If a report schedule with the same report type and marketplace IDs already exists, it will be cancelled and replaced with this one.  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 0.0222 | 10 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
 
 ### Example
 ```java
@@ -197,11 +195,11 @@ No authorization required
 
 <a name="getReport"></a>
 # **getReport**
-> GetReportResponse getReport(reportId)
+> Report getReport(reportId)
 
 
 
-Effective **June 27, 2023**, the &#x60;getReport&#x60; operation will no longer be available in the Selling Partner API for Reports v2020-09-04 and all calls to it will fail. Integrations that rely on this operation should migrate to [Reports v2021-06-30](https://developer-docs.amazon.com/sp-api/docs/reports-api-v2021-06-30-reference) to avoid service disruption.
+Returns report details (including the reportDocumentId, if available) for the report that you specify.  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 2 | 15 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
 
 ### Example
 ```java
@@ -213,7 +211,7 @@ Effective **June 27, 2023**, the &#x60;getReport&#x60; operation will no longer 
 ReportsApi apiInstance = new ReportsApi();
 String reportId = "reportId_example"; // String | The identifier for the report. This identifier is unique only in combination with a seller ID.
 try {
-    GetReportResponse result = apiInstance.getReport(reportId);
+    Report result = apiInstance.getReport(reportId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ReportsApi#getReport");
@@ -229,7 +227,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetReportResponse**](GetReportResponse.md)
+[**Report**](Report.md)
 
 ### Authorization
 
@@ -242,11 +240,11 @@ No authorization required
 
 <a name="getReportDocument"></a>
 # **getReportDocument**
-> GetReportDocumentResponse getReportDocument(reportDocumentId)
+> ReportDocument getReportDocument(reportDocumentId)
 
 
 
-Effective **June 27, 2023**, the &#x60;getReportDocument&#x60; operation will no longer be available in the Selling Partner API for Reports v2020-09-04 and all calls to it will fail. Integrations that rely on this operation should migrate to [Reports v2021-06-30](https://developer-docs.amazon.com/sp-api/docs/reports-api-v2021-06-30-reference) to avoid service disruption.
+Returns the information required for retrieving a report document&#39;s contents.  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 0.0167 | 15 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
 
 ### Example
 ```java
@@ -258,7 +256,7 @@ Effective **June 27, 2023**, the &#x60;getReportDocument&#x60; operation will no
 ReportsApi apiInstance = new ReportsApi();
 String reportDocumentId = "reportDocumentId_example"; // String | The identifier for the report document.
 try {
-    GetReportDocumentResponse result = apiInstance.getReportDocument(reportDocumentId);
+    ReportDocument result = apiInstance.getReportDocument(reportDocumentId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ReportsApi#getReportDocument");
@@ -274,7 +272,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetReportDocumentResponse**](GetReportDocumentResponse.md)
+[**ReportDocument**](ReportDocument.md)
 
 ### Authorization
 
@@ -287,11 +285,11 @@ No authorization required
 
 <a name="getReportSchedule"></a>
 # **getReportSchedule**
-> GetReportScheduleResponse getReportSchedule(reportScheduleId)
+> ReportSchedule getReportSchedule(reportScheduleId)
 
 
 
-Effective **June 27, 2023**, the &#x60;getReportSchedule&#x60; operation will no longer be available in the Selling Partner API for Reports v2020-09-04 and all calls to it will fail. Integrations that rely on this operation should migrate to [Reports v2021-06-30](https://developer-docs.amazon.com/sp-api/docs/reports-api-v2021-06-30-reference) to avoid service disruption.
+Returns report schedule details for the report schedule that you specify.  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 0.0222 | 10 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
 
 ### Example
 ```java
@@ -303,7 +301,7 @@ Effective **June 27, 2023**, the &#x60;getReportSchedule&#x60; operation will no
 ReportsApi apiInstance = new ReportsApi();
 String reportScheduleId = "reportScheduleId_example"; // String | The identifier for the report schedule. This identifier is unique only in combination with a seller ID.
 try {
-    GetReportScheduleResponse result = apiInstance.getReportSchedule(reportScheduleId);
+    ReportSchedule result = apiInstance.getReportSchedule(reportScheduleId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ReportsApi#getReportSchedule");
@@ -319,7 +317,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetReportScheduleResponse**](GetReportScheduleResponse.md)
+[**ReportSchedule**](ReportSchedule.md)
 
 ### Authorization
 
@@ -332,11 +330,11 @@ No authorization required
 
 <a name="getReportSchedules"></a>
 # **getReportSchedules**
-> GetReportSchedulesResponse getReportSchedules(reportTypes)
+> ReportScheduleList getReportSchedules(reportTypes)
 
 
 
-Effective **June 27, 2023**, the &#x60;getReportSchedules&#x60; operation will no longer be available in the Selling Partner API for Reports v2020-09-04 and all calls to it will fail. Integrations that rely on this operation should migrate to [Reports v2021-06-30](https://developer-docs.amazon.com/sp-api/docs/reports-api-v2021-06-30-reference) to avoid service disruption.
+Returns report schedule details that match the filters that you specify.  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 0.0222 | 10 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
 
 ### Example
 ```java
@@ -346,9 +344,9 @@ Effective **June 27, 2023**, the &#x60;getReportSchedules&#x60; operation will n
 
 
 ReportsApi apiInstance = new ReportsApi();
-List<String> reportTypes = Arrays.asList("reportTypes_example"); // List<String> | A list of report types used to filter report schedules.
+List<String> reportTypes = Arrays.asList("reportTypes_example"); // List<String> | A list of report types used to filter report schedules. Refer to [Report Type Values](https://developer-docs.amazon.com/sp-api/docs/report-type-values) for more information.
 try {
-    GetReportSchedulesResponse result = apiInstance.getReportSchedules(reportTypes);
+    ReportScheduleList result = apiInstance.getReportSchedules(reportTypes);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ReportsApi#getReportSchedules");
@@ -360,11 +358,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reportTypes** | [**List&lt;String&gt;**](String.md)| A list of report types used to filter report schedules. |
+ **reportTypes** | [**List&lt;String&gt;**](String.md)| A list of report types used to filter report schedules. Refer to [Report Type Values](https://developer-docs.amazon.com/sp-api/docs/report-type-values) for more information. |
 
 ### Return type
 
-[**GetReportSchedulesResponse**](GetReportSchedulesResponse.md)
+[**ReportScheduleList**](ReportScheduleList.md)
 
 ### Authorization
 
@@ -381,7 +379,7 @@ No authorization required
 
 
 
-Effective **June 27, 2023**, the &#x60;getReports&#x60; operation will no longer be available in the Selling Partner API for Reports v2020-09-04 and all calls to it will fail. Integrations that rely on this operation should migrate to [Reports v2021-06-30](https://developer-docs.amazon.com/sp-api/docs/reports-api-v2021-06-30-reference) to avoid service disruption.
+Returns report details for the reports that match the filters that you specify.  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 0.0222 | 10 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
 
 ### Example
 ```java
@@ -391,7 +389,7 @@ Effective **June 27, 2023**, the &#x60;getReports&#x60; operation will no longer
 
 
 ReportsApi apiInstance = new ReportsApi();
-List<String> reportTypes = Arrays.asList("reportTypes_example"); // List<String> | A list of report types used to filter reports. When reportTypes is provided, the other filter parameters (processingStatuses, marketplaceIds, createdSince, createdUntil) and pageSize may also be provided. Either reportTypes or nextToken is required.
+List<String> reportTypes = Arrays.asList("reportTypes_example"); // List<String> | A list of report types used to filter reports. Refer to [Report Type Values](https://developer-docs.amazon.com/sp-api/docs/report-type-values) for more information. When reportTypes is provided, the other filter parameters (processingStatuses, marketplaceIds, createdSince, createdUntil) and pageSize may also be provided. Either reportTypes or nextToken is required.
 List<String> processingStatuses = Arrays.asList("processingStatuses_example"); // List<String> | A list of processing statuses used to filter reports.
 List<String> marketplaceIds = Arrays.asList("marketplaceIds_example"); // List<String> | A list of marketplace identifiers used to filter reports. The reports returned will match at least one of the marketplaces that you specify.
 Integer pageSize = 10; // Integer | The maximum number of reports to return in a single call.
@@ -411,7 +409,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reportTypes** | [**List&lt;String&gt;**](String.md)| A list of report types used to filter reports. When reportTypes is provided, the other filter parameters (processingStatuses, marketplaceIds, createdSince, createdUntil) and pageSize may also be provided. Either reportTypes or nextToken is required. | [optional]
+ **reportTypes** | [**List&lt;String&gt;**](String.md)| A list of report types used to filter reports. Refer to [Report Type Values](https://developer-docs.amazon.com/sp-api/docs/report-type-values) for more information. When reportTypes is provided, the other filter parameters (processingStatuses, marketplaceIds, createdSince, createdUntil) and pageSize may also be provided. Either reportTypes or nextToken is required. | [optional]
  **processingStatuses** | [**List&lt;String&gt;**](String.md)| A list of processing statuses used to filter reports. | [optional] [enum: CANCELLED, DONE, FATAL, IN_PROGRESS, IN_QUEUE]
  **marketplaceIds** | [**List&lt;String&gt;**](String.md)| A list of marketplace identifiers used to filter reports. The reports returned will match at least one of the marketplaces that you specify. | [optional]
  **pageSize** | **Integer**| The maximum number of reports to return in a single call. | [optional] [default to 10]

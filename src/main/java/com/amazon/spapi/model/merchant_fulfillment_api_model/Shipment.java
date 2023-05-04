@@ -36,7 +36,7 @@ import java.io.IOException;
  * The details of a shipment, including the shipment status.
  */
 @ApiModel(description = "The details of a shipment, including the shipment status.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:26.282-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:00.796-04:00")
 public class Shipment {
   @SerializedName("ShipmentId")
   private String shipmentId = null;

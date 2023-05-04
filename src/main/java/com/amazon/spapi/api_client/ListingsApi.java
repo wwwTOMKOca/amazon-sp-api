@@ -1,6 +1,6 @@
 /*
- * Selling Partner API for Listings Items
- * The Selling Partner API for Listings Items (Listings Items API) provides programmatic access to selling partner listings on Amazon. Use this API in collaboration with the Selling Partner API for Product Type Definitions, which you use to retrieve the information about Amazon product types needed to use the Listings Items API.  For more information, see the [Listings Items API Use Case Guide](doc:listings-items-api-v2021-08-01-use-case-guide).
+ * Selling Partner API for Listings Restrictions
+ * The Selling Partner API for Listings Restrictions provides programmatic access to restrictions on Amazon catalog listings.  For more information, see the [Listings Restrictions API Use Case Guide](doc:listings-restrictions-api-v2021-08-01-use-case-guide).
  *
  * OpenAPI spec version: 2021-08-01
  * 
@@ -27,11 +27,8 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.amazon.spapi.model.listings_items_api_model.ErrorList;
-import com.amazon.spapi.model.listings_items_api_model.Item;
-import com.amazon.spapi.model.listings_items_api_model.ListingsItemPatchRequest;
-import com.amazon.spapi.model.listings_items_api_model.ListingsItemPutRequest;
-import com.amazon.spapi.model.listings_items_api_model.ListingsItemSubmissionResponse;
+import com.amazon.spapi.model.listings_restrictions_api_model.ErrorList;
+import com.amazon.spapi.model.listings_restrictions_api_model.RestrictionList;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -59,183 +56,35 @@ public class ListingsApi {
     }
 
     /**
-     * Build call for deleteListingsItem
-     * @param sellerId A selling partner identifier, such as a merchant account or vendor code. (required)
-     * @param sku A selling partner provided identifier for an Amazon listing. (required)
+     * Build call for getListingsRestrictions
+     * @param asin The Amazon Standard Identification Number (ASIN) of the item. (required)
+     * @param sellerId A selling partner identifier, such as a merchant account. (required)
      * @param marketplaceIds A comma-delimited list of Amazon marketplace identifiers for the request. (required)
-     * @param issueLocale A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: \&quot;en_US\&quot;, \&quot;fr_CA\&quot;, \&quot;fr_FR\&quot;. Localized messages default to \&quot;en_US\&quot; when a localization is not available in the specified locale. (optional)
+     * @param conditionType The condition used to filter restrictions. (optional)
+     * @param reasonLocale A locale for reason text localization. When not provided, the default language code of the first marketplace is used. Examples: \&quot;en_US\&quot;, \&quot;fr_CA\&quot;, \&quot;fr_FR\&quot;. Localized messages default to \&quot;en_US\&quot; when a localization is not available in the specified locale. (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call deleteListingsItemCall(String sellerId, String sku, List<String> marketplaceIds, String issueLocale, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getListingsRestrictionsCall(String asin, String sellerId, List<String> marketplaceIds, String conditionType, String reasonLocale, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/listings/2021-08-01/items/{sellerId}/{sku}"
-            .replaceAll("\\{" + "sellerId" + "\\}", apiClient.escapeString(sellerId.toString()))
-            .replaceAll("\\{" + "sku" + "\\}", apiClient.escapeString(sku.toString()));
+        String localVarPath = "/listings/2021-08-01/restrictions";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (asin != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("asin", asin));
+        if (conditionType != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("conditionType", conditionType));
+        if (sellerId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("sellerId", sellerId));
         if (marketplaceIds != null)
         localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("csv", "marketplaceIds", marketplaceIds));
-        if (issueLocale != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("issueLocale", issueLocale));
-
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json"
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
-
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
-        }
-
-        String[] localVarAuthNames = new String[] {  };
-        return apiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call deleteListingsItemValidateBeforeCall(String sellerId, String sku, List<String> marketplaceIds, String issueLocale, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        
-        // verify the required parameter 'sellerId' is set
-        if (sellerId == null) {
-            throw new ApiException("Missing the required parameter 'sellerId' when calling deleteListingsItem(Async)");
-        }
-        
-        // verify the required parameter 'sku' is set
-        if (sku == null) {
-            throw new ApiException("Missing the required parameter 'sku' when calling deleteListingsItem(Async)");
-        }
-        
-        // verify the required parameter 'marketplaceIds' is set
-        if (marketplaceIds == null) {
-            throw new ApiException("Missing the required parameter 'marketplaceIds' when calling deleteListingsItem(Async)");
-        }
-        
-
-        com.squareup.okhttp.Call call = deleteListingsItemCall(sellerId, sku, marketplaceIds, issueLocale, progressListener, progressRequestListener);
-        return call;
-
-    }
-
-    /**
-     * 
-     * Delete a listings item for a selling partner.  **Note:** The parameters associated with this operation may contain special characters that must be encoded to successfully call the API. To avoid errors with SKUs when encoding URLs, refer to [URL Encoding](https://developer-docs.amazon.com/sp-api/docs/url-encoding).  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 5 | 10 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
-     * @param sellerId A selling partner identifier, such as a merchant account or vendor code. (required)
-     * @param sku A selling partner provided identifier for an Amazon listing. (required)
-     * @param marketplaceIds A comma-delimited list of Amazon marketplace identifiers for the request. (required)
-     * @param issueLocale A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: \&quot;en_US\&quot;, \&quot;fr_CA\&quot;, \&quot;fr_FR\&quot;. Localized messages default to \&quot;en_US\&quot; when a localization is not available in the specified locale. (optional)
-     * @return ListingsItemSubmissionResponse
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ListingsItemSubmissionResponse deleteListingsItem(String sellerId, String sku, List<String> marketplaceIds, String issueLocale) throws ApiException {
-        ApiResponse<ListingsItemSubmissionResponse> resp = deleteListingsItemWithHttpInfo(sellerId, sku, marketplaceIds, issueLocale);
-        return resp.getData();
-    }
-
-    /**
-     * 
-     * Delete a listings item for a selling partner.  **Note:** The parameters associated with this operation may contain special characters that must be encoded to successfully call the API. To avoid errors with SKUs when encoding URLs, refer to [URL Encoding](https://developer-docs.amazon.com/sp-api/docs/url-encoding).  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 5 | 10 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
-     * @param sellerId A selling partner identifier, such as a merchant account or vendor code. (required)
-     * @param sku A selling partner provided identifier for an Amazon listing. (required)
-     * @param marketplaceIds A comma-delimited list of Amazon marketplace identifiers for the request. (required)
-     * @param issueLocale A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: \&quot;en_US\&quot;, \&quot;fr_CA\&quot;, \&quot;fr_FR\&quot;. Localized messages default to \&quot;en_US\&quot; when a localization is not available in the specified locale. (optional)
-     * @return ApiResponse&lt;ListingsItemSubmissionResponse&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<ListingsItemSubmissionResponse> deleteListingsItemWithHttpInfo(String sellerId, String sku, List<String> marketplaceIds, String issueLocale) throws ApiException {
-        com.squareup.okhttp.Call call = deleteListingsItemValidateBeforeCall(sellerId, sku, marketplaceIds, issueLocale, null, null);
-        Type localVarReturnType = new TypeToken<ListingsItemSubmissionResponse>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
-    }
-
-    /**
-     *  (asynchronously)
-     * Delete a listings item for a selling partner.  **Note:** The parameters associated with this operation may contain special characters that must be encoded to successfully call the API. To avoid errors with SKUs when encoding URLs, refer to [URL Encoding](https://developer-docs.amazon.com/sp-api/docs/url-encoding).  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 5 | 10 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
-     * @param sellerId A selling partner identifier, such as a merchant account or vendor code. (required)
-     * @param sku A selling partner provided identifier for an Amazon listing. (required)
-     * @param marketplaceIds A comma-delimited list of Amazon marketplace identifiers for the request. (required)
-     * @param issueLocale A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: \&quot;en_US\&quot;, \&quot;fr_CA\&quot;, \&quot;fr_FR\&quot;. Localized messages default to \&quot;en_US\&quot; when a localization is not available in the specified locale. (optional)
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call deleteListingsItemAsync(String sellerId, String sku, List<String> marketplaceIds, String issueLocale, final ApiCallback<ListingsItemSubmissionResponse> callback) throws ApiException {
-
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        com.squareup.okhttp.Call call = deleteListingsItemValidateBeforeCall(sellerId, sku, marketplaceIds, issueLocale, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<ListingsItemSubmissionResponse>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
-    }
-    /**
-     * Build call for getListingsItem
-     * @param sellerId A selling partner identifier, such as a merchant account or vendor code. (required)
-     * @param sku A selling partner provided identifier for an Amazon listing. (required)
-     * @param marketplaceIds A comma-delimited list of Amazon marketplace identifiers for the request. (required)
-     * @param issueLocale A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: \&quot;en_US\&quot;, \&quot;fr_CA\&quot;, \&quot;fr_FR\&quot;. Localized messages default to \&quot;en_US\&quot; when a localization is not available in the specified locale. (optional)
-     * @param includedData A comma-delimited list of data sets to include in the response. Default: summaries. (optional)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call getListingsItemCall(String sellerId, String sku, List<String> marketplaceIds, String issueLocale, List<String> includedData, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/listings/2021-08-01/items/{sellerId}/{sku}"
-            .replaceAll("\\{" + "sellerId" + "\\}", apiClient.escapeString(sellerId.toString()))
-            .replaceAll("\\{" + "sku" + "\\}", apiClient.escapeString(sku.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        if (marketplaceIds != null)
-        localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("csv", "marketplaceIds", marketplaceIds));
-        if (issueLocale != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("issueLocale", issueLocale));
-        if (includedData != null)
-        localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("csv", "includedData", includedData));
+        if (reasonLocale != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("reasonLocale", reasonLocale));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -270,75 +119,75 @@ public class ListingsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getListingsItemValidateBeforeCall(String sellerId, String sku, List<String> marketplaceIds, String issueLocale, List<String> includedData, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getListingsRestrictionsValidateBeforeCall(String asin, String sellerId, List<String> marketplaceIds, String conditionType, String reasonLocale, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'asin' is set
+        if (asin == null) {
+            throw new ApiException("Missing the required parameter 'asin' when calling getListingsRestrictions(Async)");
+        }
         
         // verify the required parameter 'sellerId' is set
         if (sellerId == null) {
-            throw new ApiException("Missing the required parameter 'sellerId' when calling getListingsItem(Async)");
-        }
-        
-        // verify the required parameter 'sku' is set
-        if (sku == null) {
-            throw new ApiException("Missing the required parameter 'sku' when calling getListingsItem(Async)");
+            throw new ApiException("Missing the required parameter 'sellerId' when calling getListingsRestrictions(Async)");
         }
         
         // verify the required parameter 'marketplaceIds' is set
         if (marketplaceIds == null) {
-            throw new ApiException("Missing the required parameter 'marketplaceIds' when calling getListingsItem(Async)");
+            throw new ApiException("Missing the required parameter 'marketplaceIds' when calling getListingsRestrictions(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = getListingsItemCall(sellerId, sku, marketplaceIds, issueLocale, includedData, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getListingsRestrictionsCall(asin, sellerId, marketplaceIds, conditionType, reasonLocale, progressListener, progressRequestListener);
         return call;
 
     }
 
     /**
      * 
-     * Returns details about a listings item for a selling partner.  **Note:** The parameters associated with this operation may contain special characters that must be encoded to successfully call the API. To avoid errors with SKUs when encoding URLs, refer to [URL Encoding](https://developer-docs.amazon.com/sp-api/docs/url-encoding).  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 5 | 10 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
-     * @param sellerId A selling partner identifier, such as a merchant account or vendor code. (required)
-     * @param sku A selling partner provided identifier for an Amazon listing. (required)
+     * Returns listing restrictions for an item in the Amazon Catalog.   **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 5 | 10 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values then those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](doc:usage-plans-and-rate-limits-in-the-sp-api).
+     * @param asin The Amazon Standard Identification Number (ASIN) of the item. (required)
+     * @param sellerId A selling partner identifier, such as a merchant account. (required)
      * @param marketplaceIds A comma-delimited list of Amazon marketplace identifiers for the request. (required)
-     * @param issueLocale A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: \&quot;en_US\&quot;, \&quot;fr_CA\&quot;, \&quot;fr_FR\&quot;. Localized messages default to \&quot;en_US\&quot; when a localization is not available in the specified locale. (optional)
-     * @param includedData A comma-delimited list of data sets to include in the response. Default: summaries. (optional)
-     * @return Item
+     * @param conditionType The condition used to filter restrictions. (optional)
+     * @param reasonLocale A locale for reason text localization. When not provided, the default language code of the first marketplace is used. Examples: \&quot;en_US\&quot;, \&quot;fr_CA\&quot;, \&quot;fr_FR\&quot;. Localized messages default to \&quot;en_US\&quot; when a localization is not available in the specified locale. (optional)
+     * @return RestrictionList
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Item getListingsItem(String sellerId, String sku, List<String> marketplaceIds, String issueLocale, List<String> includedData) throws ApiException {
-        ApiResponse<Item> resp = getListingsItemWithHttpInfo(sellerId, sku, marketplaceIds, issueLocale, includedData);
+    public RestrictionList getListingsRestrictions(String asin, String sellerId, List<String> marketplaceIds, String conditionType, String reasonLocale) throws ApiException {
+        ApiResponse<RestrictionList> resp = getListingsRestrictionsWithHttpInfo(asin, sellerId, marketplaceIds, conditionType, reasonLocale);
         return resp.getData();
     }
 
     /**
      * 
-     * Returns details about a listings item for a selling partner.  **Note:** The parameters associated with this operation may contain special characters that must be encoded to successfully call the API. To avoid errors with SKUs when encoding URLs, refer to [URL Encoding](https://developer-docs.amazon.com/sp-api/docs/url-encoding).  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 5 | 10 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
-     * @param sellerId A selling partner identifier, such as a merchant account or vendor code. (required)
-     * @param sku A selling partner provided identifier for an Amazon listing. (required)
+     * Returns listing restrictions for an item in the Amazon Catalog.   **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 5 | 10 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values then those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](doc:usage-plans-and-rate-limits-in-the-sp-api).
+     * @param asin The Amazon Standard Identification Number (ASIN) of the item. (required)
+     * @param sellerId A selling partner identifier, such as a merchant account. (required)
      * @param marketplaceIds A comma-delimited list of Amazon marketplace identifiers for the request. (required)
-     * @param issueLocale A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: \&quot;en_US\&quot;, \&quot;fr_CA\&quot;, \&quot;fr_FR\&quot;. Localized messages default to \&quot;en_US\&quot; when a localization is not available in the specified locale. (optional)
-     * @param includedData A comma-delimited list of data sets to include in the response. Default: summaries. (optional)
-     * @return ApiResponse&lt;Item&gt;
+     * @param conditionType The condition used to filter restrictions. (optional)
+     * @param reasonLocale A locale for reason text localization. When not provided, the default language code of the first marketplace is used. Examples: \&quot;en_US\&quot;, \&quot;fr_CA\&quot;, \&quot;fr_FR\&quot;. Localized messages default to \&quot;en_US\&quot; when a localization is not available in the specified locale. (optional)
+     * @return ApiResponse&lt;RestrictionList&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Item> getListingsItemWithHttpInfo(String sellerId, String sku, List<String> marketplaceIds, String issueLocale, List<String> includedData) throws ApiException {
-        com.squareup.okhttp.Call call = getListingsItemValidateBeforeCall(sellerId, sku, marketplaceIds, issueLocale, includedData, null, null);
-        Type localVarReturnType = new TypeToken<Item>(){}.getType();
+    public ApiResponse<RestrictionList> getListingsRestrictionsWithHttpInfo(String asin, String sellerId, List<String> marketplaceIds, String conditionType, String reasonLocale) throws ApiException {
+        com.squareup.okhttp.Call call = getListingsRestrictionsValidateBeforeCall(asin, sellerId, marketplaceIds, conditionType, reasonLocale, null, null);
+        Type localVarReturnType = new TypeToken<RestrictionList>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
      *  (asynchronously)
-     * Returns details about a listings item for a selling partner.  **Note:** The parameters associated with this operation may contain special characters that must be encoded to successfully call the API. To avoid errors with SKUs when encoding URLs, refer to [URL Encoding](https://developer-docs.amazon.com/sp-api/docs/url-encoding).  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 5 | 10 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
-     * @param sellerId A selling partner identifier, such as a merchant account or vendor code. (required)
-     * @param sku A selling partner provided identifier for an Amazon listing. (required)
+     * Returns listing restrictions for an item in the Amazon Catalog.   **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 5 | 10 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values then those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](doc:usage-plans-and-rate-limits-in-the-sp-api).
+     * @param asin The Amazon Standard Identification Number (ASIN) of the item. (required)
+     * @param sellerId A selling partner identifier, such as a merchant account. (required)
      * @param marketplaceIds A comma-delimited list of Amazon marketplace identifiers for the request. (required)
-     * @param issueLocale A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: \&quot;en_US\&quot;, \&quot;fr_CA\&quot;, \&quot;fr_FR\&quot;. Localized messages default to \&quot;en_US\&quot; when a localization is not available in the specified locale. (optional)
-     * @param includedData A comma-delimited list of data sets to include in the response. Default: summaries. (optional)
+     * @param conditionType The condition used to filter restrictions. (optional)
+     * @param reasonLocale A locale for reason text localization. When not provided, the default language code of the first marketplace is used. Examples: \&quot;en_US\&quot;, \&quot;fr_CA\&quot;, \&quot;fr_FR\&quot;. Localized messages default to \&quot;en_US\&quot; when a localization is not available in the specified locale. (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getListingsItemAsync(String sellerId, String sku, List<String> marketplaceIds, String issueLocale, List<String> includedData, final ApiCallback<Item> callback) throws ApiException {
+    public com.squareup.okhttp.Call getListingsRestrictionsAsync(String asin, String sellerId, List<String> marketplaceIds, String conditionType, String reasonLocale, final ApiCallback<RestrictionList> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -359,326 +208,8 @@ public class ListingsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getListingsItemValidateBeforeCall(sellerId, sku, marketplaceIds, issueLocale, includedData, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<Item>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
-    }
-    /**
-     * Build call for patchListingsItem
-     * @param sellerId A selling partner identifier, such as a merchant account or vendor code. (required)
-     * @param sku A selling partner provided identifier for an Amazon listing. (required)
-     * @param marketplaceIds A comma-delimited list of Amazon marketplace identifiers for the request. (required)
-     * @param body The request body schema for the patchListingsItem operation. (required)
-     * @param issueLocale A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: \&quot;en_US\&quot;, \&quot;fr_CA\&quot;, \&quot;fr_FR\&quot;. Localized messages default to \&quot;en_US\&quot; when a localization is not available in the specified locale. (optional)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call patchListingsItemCall(String sellerId, String sku, List<String> marketplaceIds, ListingsItemPatchRequest body, String issueLocale, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = body;
-
-        // create path and map variables
-        String localVarPath = "/listings/2021-08-01/items/{sellerId}/{sku}"
-            .replaceAll("\\{" + "sellerId" + "\\}", apiClient.escapeString(sellerId.toString()))
-            .replaceAll("\\{" + "sku" + "\\}", apiClient.escapeString(sku.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        if (marketplaceIds != null)
-        localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("csv", "marketplaceIds", marketplaceIds));
-        if (issueLocale != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("issueLocale", issueLocale));
-
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json"
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
-
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
-        }
-
-        String[] localVarAuthNames = new String[] {  };
-        return apiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call patchListingsItemValidateBeforeCall(String sellerId, String sku, List<String> marketplaceIds, ListingsItemPatchRequest body, String issueLocale, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        
-        // verify the required parameter 'sellerId' is set
-        if (sellerId == null) {
-            throw new ApiException("Missing the required parameter 'sellerId' when calling patchListingsItem(Async)");
-        }
-        
-        // verify the required parameter 'sku' is set
-        if (sku == null) {
-            throw new ApiException("Missing the required parameter 'sku' when calling patchListingsItem(Async)");
-        }
-        
-        // verify the required parameter 'marketplaceIds' is set
-        if (marketplaceIds == null) {
-            throw new ApiException("Missing the required parameter 'marketplaceIds' when calling patchListingsItem(Async)");
-        }
-        
-        // verify the required parameter 'body' is set
-        if (body == null) {
-            throw new ApiException("Missing the required parameter 'body' when calling patchListingsItem(Async)");
-        }
-        
-
-        com.squareup.okhttp.Call call = patchListingsItemCall(sellerId, sku, marketplaceIds, body, issueLocale, progressListener, progressRequestListener);
-        return call;
-
-    }
-
-    /**
-     * 
-     * Partially update (patch) a listings item for a selling partner. Only top-level listings item attributes can be patched. Patching nested attributes is not supported.  **Note:** The parameters associated with this operation may contain special characters that must be encoded to successfully call the API. To avoid errors with SKUs when encoding URLs, refer to [URL Encoding](https://developer-docs.amazon.com/sp-api/docs/url-encoding).  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 5 | 10 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
-     * @param sellerId A selling partner identifier, such as a merchant account or vendor code. (required)
-     * @param sku A selling partner provided identifier for an Amazon listing. (required)
-     * @param marketplaceIds A comma-delimited list of Amazon marketplace identifiers for the request. (required)
-     * @param body The request body schema for the patchListingsItem operation. (required)
-     * @param issueLocale A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: \&quot;en_US\&quot;, \&quot;fr_CA\&quot;, \&quot;fr_FR\&quot;. Localized messages default to \&quot;en_US\&quot; when a localization is not available in the specified locale. (optional)
-     * @return ListingsItemSubmissionResponse
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ListingsItemSubmissionResponse patchListingsItem(String sellerId, String sku, List<String> marketplaceIds, ListingsItemPatchRequest body, String issueLocale) throws ApiException {
-        ApiResponse<ListingsItemSubmissionResponse> resp = patchListingsItemWithHttpInfo(sellerId, sku, marketplaceIds, body, issueLocale);
-        return resp.getData();
-    }
-
-    /**
-     * 
-     * Partially update (patch) a listings item for a selling partner. Only top-level listings item attributes can be patched. Patching nested attributes is not supported.  **Note:** The parameters associated with this operation may contain special characters that must be encoded to successfully call the API. To avoid errors with SKUs when encoding URLs, refer to [URL Encoding](https://developer-docs.amazon.com/sp-api/docs/url-encoding).  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 5 | 10 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
-     * @param sellerId A selling partner identifier, such as a merchant account or vendor code. (required)
-     * @param sku A selling partner provided identifier for an Amazon listing. (required)
-     * @param marketplaceIds A comma-delimited list of Amazon marketplace identifiers for the request. (required)
-     * @param body The request body schema for the patchListingsItem operation. (required)
-     * @param issueLocale A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: \&quot;en_US\&quot;, \&quot;fr_CA\&quot;, \&quot;fr_FR\&quot;. Localized messages default to \&quot;en_US\&quot; when a localization is not available in the specified locale. (optional)
-     * @return ApiResponse&lt;ListingsItemSubmissionResponse&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<ListingsItemSubmissionResponse> patchListingsItemWithHttpInfo(String sellerId, String sku, List<String> marketplaceIds, ListingsItemPatchRequest body, String issueLocale) throws ApiException {
-        com.squareup.okhttp.Call call = patchListingsItemValidateBeforeCall(sellerId, sku, marketplaceIds, body, issueLocale, null, null);
-        Type localVarReturnType = new TypeToken<ListingsItemSubmissionResponse>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
-    }
-
-    /**
-     *  (asynchronously)
-     * Partially update (patch) a listings item for a selling partner. Only top-level listings item attributes can be patched. Patching nested attributes is not supported.  **Note:** The parameters associated with this operation may contain special characters that must be encoded to successfully call the API. To avoid errors with SKUs when encoding URLs, refer to [URL Encoding](https://developer-docs.amazon.com/sp-api/docs/url-encoding).  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 5 | 10 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
-     * @param sellerId A selling partner identifier, such as a merchant account or vendor code. (required)
-     * @param sku A selling partner provided identifier for an Amazon listing. (required)
-     * @param marketplaceIds A comma-delimited list of Amazon marketplace identifiers for the request. (required)
-     * @param body The request body schema for the patchListingsItem operation. (required)
-     * @param issueLocale A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: \&quot;en_US\&quot;, \&quot;fr_CA\&quot;, \&quot;fr_FR\&quot;. Localized messages default to \&quot;en_US\&quot; when a localization is not available in the specified locale. (optional)
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call patchListingsItemAsync(String sellerId, String sku, List<String> marketplaceIds, ListingsItemPatchRequest body, String issueLocale, final ApiCallback<ListingsItemSubmissionResponse> callback) throws ApiException {
-
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        com.squareup.okhttp.Call call = patchListingsItemValidateBeforeCall(sellerId, sku, marketplaceIds, body, issueLocale, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<ListingsItemSubmissionResponse>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
-    }
-    /**
-     * Build call for putListingsItem
-     * @param sellerId A selling partner identifier, such as a merchant account or vendor code. (required)
-     * @param sku A selling partner provided identifier for an Amazon listing. (required)
-     * @param marketplaceIds A comma-delimited list of Amazon marketplace identifiers for the request. (required)
-     * @param body The request body schema for the putListingsItem operation. (required)
-     * @param issueLocale A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: \&quot;en_US\&quot;, \&quot;fr_CA\&quot;, \&quot;fr_FR\&quot;. Localized messages default to \&quot;en_US\&quot; when a localization is not available in the specified locale. (optional)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call putListingsItemCall(String sellerId, String sku, List<String> marketplaceIds, ListingsItemPutRequest body, String issueLocale, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = body;
-
-        // create path and map variables
-        String localVarPath = "/listings/2021-08-01/items/{sellerId}/{sku}"
-            .replaceAll("\\{" + "sellerId" + "\\}", apiClient.escapeString(sellerId.toString()))
-            .replaceAll("\\{" + "sku" + "\\}", apiClient.escapeString(sku.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        if (marketplaceIds != null)
-        localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("csv", "marketplaceIds", marketplaceIds));
-        if (issueLocale != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("issueLocale", issueLocale));
-
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json"
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
-
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
-        }
-
-        String[] localVarAuthNames = new String[] {  };
-        return apiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call putListingsItemValidateBeforeCall(String sellerId, String sku, List<String> marketplaceIds, ListingsItemPutRequest body, String issueLocale, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        
-        // verify the required parameter 'sellerId' is set
-        if (sellerId == null) {
-            throw new ApiException("Missing the required parameter 'sellerId' when calling putListingsItem(Async)");
-        }
-        
-        // verify the required parameter 'sku' is set
-        if (sku == null) {
-            throw new ApiException("Missing the required parameter 'sku' when calling putListingsItem(Async)");
-        }
-        
-        // verify the required parameter 'marketplaceIds' is set
-        if (marketplaceIds == null) {
-            throw new ApiException("Missing the required parameter 'marketplaceIds' when calling putListingsItem(Async)");
-        }
-        
-        // verify the required parameter 'body' is set
-        if (body == null) {
-            throw new ApiException("Missing the required parameter 'body' when calling putListingsItem(Async)");
-        }
-        
-
-        com.squareup.okhttp.Call call = putListingsItemCall(sellerId, sku, marketplaceIds, body, issueLocale, progressListener, progressRequestListener);
-        return call;
-
-    }
-
-    /**
-     * 
-     * Creates a new or fully-updates an existing listings item for a selling partner.  **Note:** The parameters associated with this operation may contain special characters that must be encoded to successfully call the API. To avoid errors with SKUs when encoding URLs, refer to [URL Encoding](https://developer-docs.amazon.com/sp-api/docs/url-encoding).  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 5 | 10 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
-     * @param sellerId A selling partner identifier, such as a merchant account or vendor code. (required)
-     * @param sku A selling partner provided identifier for an Amazon listing. (required)
-     * @param marketplaceIds A comma-delimited list of Amazon marketplace identifiers for the request. (required)
-     * @param body The request body schema for the putListingsItem operation. (required)
-     * @param issueLocale A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: \&quot;en_US\&quot;, \&quot;fr_CA\&quot;, \&quot;fr_FR\&quot;. Localized messages default to \&quot;en_US\&quot; when a localization is not available in the specified locale. (optional)
-     * @return ListingsItemSubmissionResponse
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ListingsItemSubmissionResponse putListingsItem(String sellerId, String sku, List<String> marketplaceIds, ListingsItemPutRequest body, String issueLocale) throws ApiException {
-        ApiResponse<ListingsItemSubmissionResponse> resp = putListingsItemWithHttpInfo(sellerId, sku, marketplaceIds, body, issueLocale);
-        return resp.getData();
-    }
-
-    /**
-     * 
-     * Creates a new or fully-updates an existing listings item for a selling partner.  **Note:** The parameters associated with this operation may contain special characters that must be encoded to successfully call the API. To avoid errors with SKUs when encoding URLs, refer to [URL Encoding](https://developer-docs.amazon.com/sp-api/docs/url-encoding).  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 5 | 10 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
-     * @param sellerId A selling partner identifier, such as a merchant account or vendor code. (required)
-     * @param sku A selling partner provided identifier for an Amazon listing. (required)
-     * @param marketplaceIds A comma-delimited list of Amazon marketplace identifiers for the request. (required)
-     * @param body The request body schema for the putListingsItem operation. (required)
-     * @param issueLocale A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: \&quot;en_US\&quot;, \&quot;fr_CA\&quot;, \&quot;fr_FR\&quot;. Localized messages default to \&quot;en_US\&quot; when a localization is not available in the specified locale. (optional)
-     * @return ApiResponse&lt;ListingsItemSubmissionResponse&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<ListingsItemSubmissionResponse> putListingsItemWithHttpInfo(String sellerId, String sku, List<String> marketplaceIds, ListingsItemPutRequest body, String issueLocale) throws ApiException {
-        com.squareup.okhttp.Call call = putListingsItemValidateBeforeCall(sellerId, sku, marketplaceIds, body, issueLocale, null, null);
-        Type localVarReturnType = new TypeToken<ListingsItemSubmissionResponse>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
-    }
-
-    /**
-     *  (asynchronously)
-     * Creates a new or fully-updates an existing listings item for a selling partner.  **Note:** The parameters associated with this operation may contain special characters that must be encoded to successfully call the API. To avoid errors with SKUs when encoding URLs, refer to [URL Encoding](https://developer-docs.amazon.com/sp-api/docs/url-encoding).  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 5 | 10 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
-     * @param sellerId A selling partner identifier, such as a merchant account or vendor code. (required)
-     * @param sku A selling partner provided identifier for an Amazon listing. (required)
-     * @param marketplaceIds A comma-delimited list of Amazon marketplace identifiers for the request. (required)
-     * @param body The request body schema for the putListingsItem operation. (required)
-     * @param issueLocale A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: \&quot;en_US\&quot;, \&quot;fr_CA\&quot;, \&quot;fr_FR\&quot;. Localized messages default to \&quot;en_US\&quot; when a localization is not available in the specified locale. (optional)
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call putListingsItemAsync(String sellerId, String sku, List<String> marketplaceIds, ListingsItemPutRequest body, String issueLocale, final ApiCallback<ListingsItemSubmissionResponse> callback) throws ApiException {
-
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        com.squareup.okhttp.Call call = putListingsItemValidateBeforeCall(sellerId, sku, marketplaceIds, body, issueLocale, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<ListingsItemSubmissionResponse>(){}.getType();
+        com.squareup.okhttp.Call call = getListingsRestrictionsValidateBeforeCall(asin, sellerId, marketplaceIds, conditionType, reasonLocale, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestrictionList>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

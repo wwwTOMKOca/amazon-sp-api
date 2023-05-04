@@ -29,7 +29,7 @@ import java.io.IOException;
  * Failed ad hoc disbursement event list.
  */
 @ApiModel(description = "Failed ad hoc disbursement event list.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:24.430-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:06.303-04:00")
 public class FailedAdhocDisbursementEventList {
   @SerializedName("FundsTransfersType")
   private String fundsTransfersType = null;

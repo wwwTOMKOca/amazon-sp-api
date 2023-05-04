@@ -22,7 +22,7 @@ import java.util.List;
 /**
  * InboundShipmentPlanRequestItemList
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:31.213-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:54.337-04:00")
 public class InboundShipmentPlanRequestItemList extends ArrayList<InboundShipmentPlanRequestItem> {
 
   @Override

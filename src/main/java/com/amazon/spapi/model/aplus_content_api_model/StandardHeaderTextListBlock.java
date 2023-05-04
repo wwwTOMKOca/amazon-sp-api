@@ -30,7 +30,7 @@ import java.io.IOException;
  * The A+ standard fixed-length list of text, with a related headline.
  */
 @ApiModel(description = "The A+ standard fixed-length list of text, with a related headline.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:33.376-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:03.792-04:00")
 public class StandardHeaderTextListBlock {
   @SerializedName("headline")
   private TextComponent headline = null;

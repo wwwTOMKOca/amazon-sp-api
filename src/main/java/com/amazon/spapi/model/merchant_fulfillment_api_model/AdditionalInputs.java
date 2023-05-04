@@ -29,7 +29,7 @@ import java.io.IOException;
  * Maps the additional seller input to the definition. The key to the map is the field name.
  */
 @ApiModel(description = "Maps the additional seller input to the definition. The key to the map is the field name.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:26.282-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:00.796-04:00")
 public class AdditionalInputs {
   @SerializedName("AdditionalInputFieldName")
   private String additionalInputFieldName = null;

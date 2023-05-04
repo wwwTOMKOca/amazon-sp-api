@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * SmallAndLightFeePreviews
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:34.356-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:05.441-04:00")
 public class SmallAndLightFeePreviews {
   @SerializedName("data")
   private List<FeePreview> data = null;

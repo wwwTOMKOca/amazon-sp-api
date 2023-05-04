@@ -30,7 +30,7 @@ import java.io.IOException;
  * The common properties for responses to individual requests within a batch.
  */
 @ApiModel(description = "The common properties for responses to individual requests within a batch.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:32.787-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:58.021-04:00")
 public class BatchResponse {
   @SerializedName("headers")
   private HttpHeaders headers = null;

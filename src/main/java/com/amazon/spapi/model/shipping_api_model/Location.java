@@ -28,7 +28,7 @@ import java.io.IOException;
  * The location where the person, business or institution is located.
  */
 @ApiModel(description = "The location where the person, business or institution is located.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:15.232-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:10.750-04:00")
 public class Location {
   @SerializedName("stateOrRegion")
   private String stateOrRegion = null;

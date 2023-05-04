@@ -32,7 +32,7 @@ import java.util.List;
  * Range capacity entity where each entry has a capacity type and corresponding slots.
  */
 @ApiModel(description = "Range capacity entity where each entry has a capacity type and corresponding slots.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:14.119-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:03.079-04:00")
 public class RangeCapacity {
   @SerializedName("capacityType")
   private CapacityType capacityType = null;

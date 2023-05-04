@@ -28,7 +28,7 @@ import java.io.IOException;
  * Warning returned when the request is successful, but there are important callouts based on which API clients should take defined actions.
  */
 @ApiModel(description = "Warning returned when the request is successful, but there are important callouts based on which API clients should take defined actions.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:14.119-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:03.079-04:00")
 public class Warning {
   @SerializedName("code")
   private String code = null;

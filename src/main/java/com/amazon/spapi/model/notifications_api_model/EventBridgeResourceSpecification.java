@@ -28,7 +28,7 @@ import java.io.IOException;
  * The information required to create an Amazon EventBridge destination.
  */
 @ApiModel(description = "The information required to create an Amazon EventBridge destination.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:29.080-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:08.356-04:00")
 public class EventBridgeResourceSpecification {
   @SerializedName("region")
   private String region = null;

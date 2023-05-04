@@ -29,7 +29,7 @@ import java.io.IOException;
  * Information that you provide to Amazon about a Small Parcel shipment shipped by a carrier that has not partnered with Amazon.
  */
 @ApiModel(description = "Information that you provide to Amazon about a Small Parcel shipment shipped by a carrier that has not partnered with Amazon.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:31.213-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:54.337-04:00")
 public class NonPartneredSmallParcelDataInput {
   @SerializedName("CarrierName")
   private String carrierName = null;

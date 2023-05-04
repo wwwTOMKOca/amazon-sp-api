@@ -30,7 +30,7 @@ import java.io.IOException;
  * The A+ Content standard text box block, comprised of a paragraph with a headline.
  */
 @ApiModel(description = "The A+ Content standard text box block, comprised of a paragraph with a headline.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:33.376-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:03.792-04:00")
 public class StandardTextBlock {
   @SerializedName("headline")
   private TextComponent headline = null;

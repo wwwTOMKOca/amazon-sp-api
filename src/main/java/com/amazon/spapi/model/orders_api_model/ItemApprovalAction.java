@@ -29,7 +29,7 @@ import java.io.IOException;
  * This object represents an approval action used by the actors in the order item approval process. Check the applicable restrictions at the specific approval type schemas.
  */
 @ApiModel(description = "This object represents an approval action used by the actors in the order item approval process. Check the applicable restrictions at the specific approval type schemas.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:28.341-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:01.520-04:00")
 public class ItemApprovalAction {
   /**
    * Defines the type of action for the approval.

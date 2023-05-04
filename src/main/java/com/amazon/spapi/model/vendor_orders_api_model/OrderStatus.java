@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Current status of a purchase order.
  */
 @ApiModel(description = "Current status of a purchase order.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:16.566-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:53.803-04:00")
 public class OrderStatus {
   @SerializedName("purchaseOrderNumber")
   private String purchaseOrderNumber = null;

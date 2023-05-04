@@ -12,8 +12,9 @@ Name | Type | Description | Notes
 **scheduledDeliveryShipment** | [**ScheduledDeliveryShipment**](ScheduledDeliveryShipment.md) | Details for the scheduled delivery shipment. |  [optional]
 **giftDetails** | [**GiftDetails**](GiftDetails.md) | Gift message and wrapId details. |  [optional]
 **netPrice** | [**Money**](Money.md) | Net price (before tax) to vendor with currency details. | 
-**taxDetails** | [**OrderItemTaxDetails**](OrderItemTaxDetails.md) |  |  [optional]
+**taxDetails** | [**TaxItemDetails**](TaxItemDetails.md) | Total tax details for the line item. |  [optional]
 **totalPrice** | [**Money**](Money.md) | The price to Amazon each (cost). |  [optional]
+**buyerCustomizedInfo** | [**BuyerCustomizedInfoDetail**](BuyerCustomizedInfoDetail.md) | The buyer information for products the vendor has configured as customizable, specifying the types of customizations or configurations along with types and ranges for their product. This provides the ability for buyers to customize multiple aspects of the products according to what the vendor allows. |  [optional]
 
 
 

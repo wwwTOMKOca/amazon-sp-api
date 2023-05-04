@@ -31,7 +31,7 @@ import java.util.List;
  * Identifiers associated with the item in the Amazon catalog for the indicated Amazon marketplace.
  */
 @ApiModel(description = "Identifiers associated with the item in the Amazon catalog for the indicated Amazon marketplace.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:20.068-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:04.460-04:00")
 public class ItemIdentifiersByMarketplace {
   @SerializedName("marketplaceId")
   private String marketplaceId = null;

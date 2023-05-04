@@ -24,7 +24,7 @@ import java.util.List;
  * A list of container.
  */
 @ApiModel(description = "A list of container.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:15.232-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:10.750-04:00")
 public class ContainerList extends ArrayList<Container> {
 
   @Override

@@ -44,7 +44,7 @@ import java.io.IOException;
  * An A+ Content module. An A+ Content document is composed of content modules. The contentModuleType property selects which content module types to use.
  */
 @ApiModel(description = "An A+ Content module. An A+ Content document is composed of content modules. The contentModuleType property selects which content module types to use.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:33.376-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:03.792-04:00")
 public class ContentModule {
   @SerializedName("contentModuleType")
   private ContentModuleType contentModuleType = null;

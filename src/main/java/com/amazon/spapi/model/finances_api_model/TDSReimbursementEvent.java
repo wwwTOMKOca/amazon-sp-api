@@ -29,7 +29,7 @@ import java.io.IOException;
  * An event related to a Tax-Deducted-at-Source (TDS) reimbursement.
  */
 @ApiModel(description = "An event related to a Tax-Deducted-at-Source (TDS) reimbursement.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:24.430-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:06.303-04:00")
 public class TDSReimbursementEvent {
   @SerializedName("PostedDate")
   private String postedDate = null;

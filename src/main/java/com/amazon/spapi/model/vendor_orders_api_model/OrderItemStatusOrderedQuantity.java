@@ -32,7 +32,7 @@ import java.util.List;
  * Ordered quantity information.
  */
 @ApiModel(description = "Ordered quantity information.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:16.566-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:53.803-04:00")
 public class OrderItemStatusOrderedQuantity {
   @SerializedName("orderedQuantity")
   private ItemQuantity orderedQuantity = null;

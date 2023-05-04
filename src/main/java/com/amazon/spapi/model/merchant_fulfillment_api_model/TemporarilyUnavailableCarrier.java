@@ -28,7 +28,7 @@ import java.io.IOException;
  * A carrier who is temporarily unavailable, most likely due to a service outage experienced by the carrier.
  */
 @ApiModel(description = "A carrier who is temporarily unavailable, most likely due to a service outage experienced by the carrier.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:26.282-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:00.796-04:00")
 public class TemporarilyUnavailableCarrier {
   @SerializedName("CarrierName")
   private String carrierName = null;

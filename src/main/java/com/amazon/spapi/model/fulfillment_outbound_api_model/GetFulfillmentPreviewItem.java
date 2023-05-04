@@ -29,7 +29,7 @@ import java.io.IOException;
  * Item information for a fulfillment order preview.
  */
 @ApiModel(description = "Item information for a fulfillment order preview.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:40.067-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:52.634-04:00")
 public class GetFulfillmentPreviewItem {
   @SerializedName("sellerSku")
   private String sellerSku = null;

@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * PartyIdentification
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:39.405-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:07.786-04:00")
 public class PartyIdentification {
   @SerializedName("partyId")
   private String partyId = null;

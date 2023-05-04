@@ -32,7 +32,7 @@ import java.io.IOException;
  * An event related to a rental transaction.
  */
 @ApiModel(description = "An event related to a rental transaction.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:24.430-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:06.303-04:00")
 public class RentalTransactionEvent {
   @SerializedName("AmazonOrderId")
   private String amazonOrderId = null;

@@ -30,7 +30,7 @@ import java.util.List;
  * The scope of work for the order.
  */
 @ApiModel(description = "The scope of work for the order.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:14.119-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:03.079-04:00")
 public class ScopeOfWork {
   @SerializedName("asin")
   private String asin = null;

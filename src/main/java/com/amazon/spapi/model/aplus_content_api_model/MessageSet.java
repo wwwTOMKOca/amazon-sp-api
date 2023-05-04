@@ -24,7 +24,7 @@ import java.util.List;
  * A set of messages to the user, such as warnings or comments.
  */
 @ApiModel(description = "A set of messages to the user, such as warnings or comments.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:33.376-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:03.792-04:00")
 public class MessageSet extends ArrayList<Error> {
 
   @Override

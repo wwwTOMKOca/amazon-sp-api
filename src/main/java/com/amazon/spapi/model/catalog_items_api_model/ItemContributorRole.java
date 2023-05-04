@@ -28,7 +28,7 @@ import java.io.IOException;
  * Role of an individual contributor in the creation of an item, such as author or actor.
  */
 @ApiModel(description = "Role of an individual contributor in the creation of an item, such as author or actor.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:20.068-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:04.460-04:00")
 public class ItemContributorRole {
   @SerializedName("displayName")
   private String displayName = null;

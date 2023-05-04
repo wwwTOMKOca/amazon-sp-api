@@ -29,7 +29,7 @@ import java.io.IOException;
  * Rich text content.
  */
 @ApiModel(description = "Rich text content.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:33.376-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:03.792-04:00")
 public class TextComponent {
   @SerializedName("value")
   private String value = null;

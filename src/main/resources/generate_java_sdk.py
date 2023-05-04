@@ -16,13 +16,16 @@ model_package_name = "com.amazon.spapi.model"
 
 def log(message):
     print(f">> {message}")
+    with open("generate_java_sdk.log", "a") as log_file:
+        log_file.write(f">> {message}\n")
 
 
 def generate_java_sdk(models_path, swagger_codegen_path, output_path, api_package_name, model_package_name):
     log("Generating Java SDK...")
     model_subpackages = {}
     for root, _, files in os.walk(models_path):
-        for file in files:
+        sorted_files = sorted(files, reverse=True)
+        for file in sorted_files:
             if file.endswith(".json"):
                 json_file = os.path.join(root, file)
                 output_directory = os.path.join(output_path, os.path.splitext(file)[0])
@@ -34,17 +37,19 @@ def generate_java_sdk(models_path, swagger_codegen_path, output_path, api_packag
                 model_subpackages[os.path.splitext(file)[0]] = model_subpackage
                 
                 log(f"Processing {file}...")
-                subprocess.run([
-                    "java",
-                    "-jar",
-                    swagger_codegen_path,
-                    "generate",
-                    "-i", json_file,
-                    "-l", "java",
-                    "--api-package", api_package_name,
-                    "--model-package", f"{model_package_name}.{model_subpackage}",
-                    "-o", output_directory
-                ])
+                with open("generate_java_sdk.log", "a") as log_file:
+                    subprocess.run([
+                        "java",
+                        "-jar",
+                        swagger_codegen_path,
+                        "generate",
+                        "-i", json_file,
+                        "-l", "java",
+                        "--api-package", api_package_name,
+                        "--model-package", f"{model_package_name}.{model_subpackage}",
+                        "-o", output_directory
+                    ], stdout=log_file, stderr=log_file)
+                break
     return model_subpackages
 
 

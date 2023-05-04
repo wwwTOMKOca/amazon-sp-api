@@ -29,7 +29,7 @@ import java.io.IOException;
  * Item information for an inbound shipment. Submitted with a call to the createInboundShipment or updateInboundShipment operation.
  */
 @ApiModel(description = "Item information for an inbound shipment. Submitted with a call to the createInboundShipment or updateInboundShipment operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:31.213-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:54.337-04:00")
 public class InboundShipmentItem {
   @SerializedName("ShipmentId")
   private String shipmentId = null;

@@ -29,7 +29,7 @@ import java.io.IOException;
  * Order item apecific approval request.
  */
 @ApiModel(description = "Order item apecific approval request.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:28.341-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:01.520-04:00")
 public class OrderItemApprovalRequest {
   @SerializedName("OrderItemId")
   private String orderItemId = null;

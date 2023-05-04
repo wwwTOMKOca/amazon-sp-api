@@ -28,7 +28,7 @@ import java.io.IOException;
  * &lt;Name, Value&gt; tuple to define item approval support data elements.
  */
 @ApiModel(description = "<Name, Value> tuple to define item approval support data elements.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:28.341-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:01.520-04:00")
 public class ApprovalSupportDataElement {
   @SerializedName("Name")
   private String name = null;

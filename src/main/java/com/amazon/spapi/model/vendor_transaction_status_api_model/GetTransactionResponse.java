@@ -30,7 +30,7 @@ import java.io.IOException;
  * The response schema for the getTransaction operation.
  */
 @ApiModel(description = "The response schema for the getTransaction operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:14.781-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:00.398-04:00")
 public class GetTransactionResponse {
   @SerializedName("payload")
   private TransactionStatus payload = null;

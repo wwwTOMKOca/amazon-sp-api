@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**reportType** | **String** | The report type. | 
+**reportType** | **String** | The report type. Refer to [Report Type Values](https://developer-docs.amazon.com/sp-api/docs/report-type-values) for more information. | 
 **marketplaceIds** | **List&lt;String&gt;** | A list of marketplace identifiers for the report schedule. | 
 **reportOptions** | [**ReportOptions**](ReportOptions.md) |  |  [optional]
 **period** | [**PeriodEnum**](#PeriodEnum) | One of a set of predefined ISO 8601 periods that specifies how often a report should be created. | 

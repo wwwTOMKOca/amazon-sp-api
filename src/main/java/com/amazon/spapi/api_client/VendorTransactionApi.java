@@ -1,6 +1,6 @@
 /*
- * Selling Partner API for Direct Fulfillment Transaction Status
- * The Selling Partner API for Direct Fulfillment Transaction Status provides programmatic access to a direct fulfillment vendor's transaction status.
+ * Selling Partner API for Retail Procurement Transaction Status
+ * The Selling Partner API for Retail Procurement Transaction Status provides programmatic access to status information on specific asynchronous POST transactions for vendors.
  *
  * OpenAPI spec version: v1
  * 
@@ -27,7 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.amazon.spapi.model.vendor_direct_fulfillment_transactions_api_model.GetTransactionResponse;
+import com.amazon.spapi.model.vendor_transaction_status_api_model.GetTransactionResponse;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -55,18 +55,18 @@ public class VendorTransactionApi {
     }
 
     /**
-     * Build call for getTransactionStatus
-     * @param transactionId Previously returned in the response to the POST request of a specific transaction. (required)
+     * Build call for getTransaction
+     * @param transactionId The GUID provided by Amazon in the &#39;transactionId&#39; field in response to the post request of a specific transaction. (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getTransactionStatusCall(String transactionId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getTransactionCall(String transactionId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/vendor/directFulfillment/transactions/v1/transactions/{transactionId}"
+        String localVarPath = "/vendor/transactions/v1/transactions/{transactionId}"
             .replaceAll("\\{" + "transactionId" + "\\}", apiClient.escapeString(transactionId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -105,53 +105,53 @@ public class VendorTransactionApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getTransactionStatusValidateBeforeCall(String transactionId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getTransactionValidateBeforeCall(String transactionId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'transactionId' is set
         if (transactionId == null) {
-            throw new ApiException("Missing the required parameter 'transactionId' when calling getTransactionStatus(Async)");
+            throw new ApiException("Missing the required parameter 'transactionId' when calling getTransaction(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = getTransactionStatusCall(transactionId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getTransactionCall(transactionId, progressListener, progressRequestListener);
         return call;
 
     }
 
     /**
      * 
-     * Returns the status of the transaction indicated by the specified transactionId.  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 10 | 10 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
-     * @param transactionId Previously returned in the response to the POST request of a specific transaction. (required)
+     * Returns the status of the transaction that you specify.  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 10 | 20 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
+     * @param transactionId The GUID provided by Amazon in the &#39;transactionId&#39; field in response to the post request of a specific transaction. (required)
      * @return GetTransactionResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public GetTransactionResponse getTransactionStatus(String transactionId) throws ApiException {
-        ApiResponse<GetTransactionResponse> resp = getTransactionStatusWithHttpInfo(transactionId);
+    public GetTransactionResponse getTransaction(String transactionId) throws ApiException {
+        ApiResponse<GetTransactionResponse> resp = getTransactionWithHttpInfo(transactionId);
         return resp.getData();
     }
 
     /**
      * 
-     * Returns the status of the transaction indicated by the specified transactionId.  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 10 | 10 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
-     * @param transactionId Previously returned in the response to the POST request of a specific transaction. (required)
+     * Returns the status of the transaction that you specify.  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 10 | 20 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
+     * @param transactionId The GUID provided by Amazon in the &#39;transactionId&#39; field in response to the post request of a specific transaction. (required)
      * @return ApiResponse&lt;GetTransactionResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<GetTransactionResponse> getTransactionStatusWithHttpInfo(String transactionId) throws ApiException {
-        com.squareup.okhttp.Call call = getTransactionStatusValidateBeforeCall(transactionId, null, null);
+    public ApiResponse<GetTransactionResponse> getTransactionWithHttpInfo(String transactionId) throws ApiException {
+        com.squareup.okhttp.Call call = getTransactionValidateBeforeCall(transactionId, null, null);
         Type localVarReturnType = new TypeToken<GetTransactionResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
      *  (asynchronously)
-     * Returns the status of the transaction indicated by the specified transactionId.  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 10 | 10 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
-     * @param transactionId Previously returned in the response to the POST request of a specific transaction. (required)
+     * Returns the status of the transaction that you specify.  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 10 | 20 |  The &#x60;x-amzn-RateLimit-Limit&#x60; response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits-in-the-sp-api).
+     * @param transactionId The GUID provided by Amazon in the &#39;transactionId&#39; field in response to the post request of a specific transaction. (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getTransactionStatusAsync(String transactionId, final ApiCallback<GetTransactionResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call getTransactionAsync(String transactionId, final ApiCallback<GetTransactionResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -172,7 +172,7 @@ public class VendorTransactionApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getTransactionStatusValidateBeforeCall(transactionId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getTransactionValidateBeforeCall(transactionId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<GetTransactionResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

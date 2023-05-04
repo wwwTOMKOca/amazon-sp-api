@@ -24,7 +24,7 @@ import java.util.List;
  * A list of error responses returned when a request is unsuccessful.
  */
 @ApiModel(description = "A list of error responses returned when a request is unsuccessful.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:25.769-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:10.276-04:00")
 public class ErrorList extends ArrayList<Error> {
 
   @Override

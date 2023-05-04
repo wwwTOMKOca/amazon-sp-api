@@ -35,7 +35,7 @@ import java.util.List;
  * Details of the Pallet/Tare being shipped.
  */
 @ApiModel(description = "Details of the Pallet/Tare being shipped.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:12.893-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:08.878-04:00")
 public class Pallet {
   @SerializedName("palletIdentifiers")
   private List<ContainerIdentification> palletIdentifiers = new ArrayList<ContainerIdentification>();

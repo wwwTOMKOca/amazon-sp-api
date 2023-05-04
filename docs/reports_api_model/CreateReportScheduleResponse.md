@@ -4,8 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**payload** | [**CreateReportScheduleResult**](CreateReportScheduleResult.md) | The payload for the createReportSchedule operation. |  [optional]
-**errors** | [**ErrorList**](ErrorList.md) |  |  [optional]
+**reportScheduleId** | **String** | The identifier for the report schedule. This identifier is unique only in combination with a seller ID. | 
 
 
 

@@ -29,7 +29,7 @@ import java.io.IOException;
  * The manual processing fee per unit and total fee for a shipment.
  */
 @ApiModel(description = "The manual processing fee per unit and total fee for a shipment.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:31.213-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:54.337-04:00")
 public class BoxContentsFeeDetails {
   @SerializedName("TotalUnits")
   private Integer totalUnits = null;

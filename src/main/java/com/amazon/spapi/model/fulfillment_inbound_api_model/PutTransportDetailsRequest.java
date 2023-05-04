@@ -30,7 +30,7 @@ import java.io.IOException;
  * The request schema for a putTransportDetails operation.
  */
 @ApiModel(description = "The request schema for a putTransportDetails operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:31.213-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:54.337-04:00")
 public class PutTransportDetailsRequest {
   @SerializedName("IsPartnered")
   private Boolean isPartnered = null;

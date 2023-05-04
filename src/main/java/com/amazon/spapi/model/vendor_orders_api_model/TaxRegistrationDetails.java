@@ -28,7 +28,7 @@ import java.io.IOException;
  * Tax registration details of the entity.
  */
 @ApiModel(description = "Tax registration details of the entity.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:16.566-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:53.803-04:00")
 public class TaxRegistrationDetails {
   /**
    * Tax registration type for the entity.

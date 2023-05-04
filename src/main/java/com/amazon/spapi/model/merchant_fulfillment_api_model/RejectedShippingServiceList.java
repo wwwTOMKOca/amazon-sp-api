@@ -24,7 +24,7 @@ import java.util.List;
  * List of services that were for some reason unavailable for this request
  */
 @ApiModel(description = "List of services that were for some reason unavailable for this request")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:26.282-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:00.796-04:00")
 public class RejectedShippingServiceList extends ArrayList<RejectedShippingService> {
 
   @Override

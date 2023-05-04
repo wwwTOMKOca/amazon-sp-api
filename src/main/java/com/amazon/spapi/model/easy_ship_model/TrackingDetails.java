@@ -28,7 +28,7 @@ import java.io.IOException;
  * Representation of tracking metadata.
  */
 @ApiModel(description = "Representation of tracking metadata.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:27.690-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:59.384-04:00")
 public class TrackingDetails {
   @SerializedName("trackingId")
   private String trackingId = null;

@@ -30,7 +30,7 @@ import java.io.IOException;
  * Price information for an item, used to estimate fees.
  */
 @ApiModel(description = "Price information for an item, used to estimate fees.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:18.328-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:55.119-04:00")
 public class PriceToEstimateFees {
   @SerializedName("ListingPrice")
   private MoneyType listingPrice = null;

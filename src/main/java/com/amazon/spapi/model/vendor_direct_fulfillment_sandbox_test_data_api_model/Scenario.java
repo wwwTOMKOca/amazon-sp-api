@@ -31,7 +31,7 @@ import java.util.List;
  * A scenario test case response returned when the request is successful.
  */
 @ApiModel(description = "A scenario test case response returned when the request is successful.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:36.551-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:11.316-04:00")
 public class Scenario {
   @SerializedName("scenarioId")
   private String scenarioId = null;

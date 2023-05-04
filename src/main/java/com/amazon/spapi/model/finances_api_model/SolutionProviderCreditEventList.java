@@ -24,7 +24,7 @@ import java.util.List;
  * A list of information about solution provider credits.
  */
 @ApiModel(description = "A list of information about solution provider credits.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:24.430-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:06.303-04:00")
 public class SolutionProviderCreditEventList extends ArrayList<SolutionProviderCreditEvent> {
 
   @Override

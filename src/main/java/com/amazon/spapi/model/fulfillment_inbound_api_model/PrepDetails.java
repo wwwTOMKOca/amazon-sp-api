@@ -30,7 +30,7 @@ import java.io.IOException;
  * Preparation instructions and who is responsible for the preparation.
  */
 @ApiModel(description = "Preparation instructions and who is responsible for the preparation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:31.213-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:54.337-04:00")
 public class PrepDetails {
   @SerializedName("PrepInstruction")
   private PrepInstruction prepInstruction = null;

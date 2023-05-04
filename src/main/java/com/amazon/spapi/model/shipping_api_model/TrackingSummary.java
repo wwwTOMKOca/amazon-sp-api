@@ -28,7 +28,7 @@ import java.io.IOException;
  * The tracking summary.
  */
 @ApiModel(description = "The tracking summary.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:15.232-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:10.750-04:00")
 public class TrackingSummary {
   @SerializedName("status")
   private String status = null;

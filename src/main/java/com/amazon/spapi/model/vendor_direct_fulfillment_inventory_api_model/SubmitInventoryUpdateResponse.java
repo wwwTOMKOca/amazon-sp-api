@@ -30,7 +30,7 @@ import java.io.IOException;
  * The response schema for the submitInventoryUpdate operation.
  */
 @ApiModel(description = "The response schema for the submitInventoryUpdate operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:16.058-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:58.555-04:00")
 public class SubmitInventoryUpdateResponse {
   @SerializedName("payload")
   private TransactionReference payload = null;

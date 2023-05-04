@@ -31,7 +31,7 @@ import java.io.IOException;
  * The A+ Content standard image and text box block.
  */
 @ApiModel(description = "The A+ Content standard image and text box block.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:33.376-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:03.792-04:00")
 public class StandardImageTextBlock {
   @SerializedName("image")
   private ImageComponent image = null;

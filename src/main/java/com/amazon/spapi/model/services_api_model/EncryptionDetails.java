@@ -28,7 +28,7 @@ import java.io.IOException;
  * Encryption details for required client-side encryption and decryption of document contents.
  */
 @ApiModel(description = "Encryption details for required client-side encryption and decryption of document contents.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:14.119-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:03.079-04:00")
 public class EncryptionDetails {
   /**
    * The encryption standard required to encrypt or decrypt the document contents.

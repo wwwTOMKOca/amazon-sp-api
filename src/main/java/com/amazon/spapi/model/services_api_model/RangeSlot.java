@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Capacity slots represented in a format similar to availability rules.
  */
 @ApiModel(description = "Capacity slots represented in a format similar to availability rules.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:14.119-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:03.079-04:00")
 public class RangeSlot {
   @SerializedName("startDateTime")
   private OffsetDateTime startDateTime = null;

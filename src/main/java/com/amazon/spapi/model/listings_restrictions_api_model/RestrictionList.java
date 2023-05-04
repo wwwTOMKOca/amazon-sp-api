@@ -31,7 +31,7 @@ import java.util.List;
  * A list of restrictions for the specified Amazon catalog item.
  */
 @ApiModel(description = "A list of restrictions for the specified Amazon catalog item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:21.840-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:02.627-04:00")
 public class RestrictionList {
   @SerializedName("restrictions")
   private List<Restriction> restrictions = new ArrayList<Restriction>();

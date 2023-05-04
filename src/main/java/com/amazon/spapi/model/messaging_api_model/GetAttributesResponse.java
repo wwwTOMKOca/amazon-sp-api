@@ -30,7 +30,7 @@ import java.io.IOException;
  * The response schema for the GetAttributes operation.
  */
 @ApiModel(description = "The response schema for the GetAttributes operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:22.822-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:57.025-04:00")
 public class GetAttributesResponse {
   @SerializedName("buyer")
   private GetAttributesResponseBuyer buyer = null;

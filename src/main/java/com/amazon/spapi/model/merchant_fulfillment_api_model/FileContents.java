@@ -29,7 +29,7 @@ import java.io.IOException;
  * The document data and checksum.
  */
 @ApiModel(description = "The document data and checksum.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:26.282-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:00.796-04:00")
 public class FileContents {
   @SerializedName("Contents")
   private String contents = null;

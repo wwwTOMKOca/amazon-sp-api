@@ -30,7 +30,7 @@ import java.io.IOException;
  * The A+ Content standard image and text block, with a related caption. The caption may not display on all devices.
  */
 @ApiModel(description = "The A+ Content standard image and text block, with a related caption. The caption may not display on all devices.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:33.376-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:54:03.792-04:00")
 public class StandardImageTextCaptionBlock {
   @SerializedName("block")
   private StandardImageTextBlock block = null;

@@ -28,7 +28,7 @@ import java.io.IOException;
  * Represents a file uploaded to a destination that was created by the [createUploadDestinationForResource](doc:uploads-api-reference#post-uploads2020-11-01uploaddestinationsresource) operation of the Selling Partner API for Uploads.
  */
 @ApiModel(description = "Represents a file uploaded to a destination that was created by the [createUploadDestinationForResource](doc:uploads-api-reference#post-uploads2020-11-01uploaddestinationsresource) operation of the Selling Partner API for Uploads.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T00:26:22.822-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T19:53:57.025-04:00")
 public class Attachment {
   @SerializedName("uploadDestinationId")
   private String uploadDestinationId = null;
