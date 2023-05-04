@@ -86,6 +86,7 @@ hs_err_pid*
 #######################################################
 
 # No need to upload amazon's selling-partner-api-models
+src/main/resources/selling-partner-api-models
 src/main/resources/selling-partner-api-models/*
 
 
