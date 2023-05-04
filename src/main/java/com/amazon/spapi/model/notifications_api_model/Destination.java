@@ -29,7 +29,7 @@ import java.io.IOException;
  * Represents a destination created when you call the createDestination operation.
  */
 @ApiModel(description = "Represents a destination created when you call the createDestination operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:51.459-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:59.274-04:00")
 public class Destination {
   @SerializedName("name")
   private String name = null;

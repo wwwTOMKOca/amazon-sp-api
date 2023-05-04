@@ -30,7 +30,7 @@ import java.io.IOException;
  * The request schema for an inbound shipment.
  */
 @ApiModel(description = "The request schema for an inbound shipment.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:37.437-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:43.557-04:00")
 public class InboundShipmentRequest {
   @SerializedName("InboundShipmentHeader")
   private InboundShipmentHeader inboundShipmentHeader = null;

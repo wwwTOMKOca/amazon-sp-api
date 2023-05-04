@@ -33,7 +33,7 @@ import java.io.IOException;
  * Information about the seller&#39;s inbound shipments. Returned by the listInboundShipments operation.
  */
 @ApiModel(description = "Information about the seller's inbound shipments. Returned by the listInboundShipments operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:37.437-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:43.557-04:00")
 public class InboundShipmentInfo {
   @SerializedName("ShipmentId")
   private String shipmentId = null;

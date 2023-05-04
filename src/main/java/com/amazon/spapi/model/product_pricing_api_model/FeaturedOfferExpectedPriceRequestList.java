@@ -24,7 +24,7 @@ import java.util.List;
  * A batched list of featured offer expected price requests.
  */
 @ApiModel(description = "A batched list of featured offer expected price requests.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:41.182-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:47.660-04:00")
 public class FeaturedOfferExpectedPriceRequestList extends ArrayList<FeaturedOfferExpectedPriceRequest> {
 
   @Override

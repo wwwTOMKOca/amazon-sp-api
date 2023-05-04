@@ -29,7 +29,7 @@ import java.io.IOException;
  * An event related to a trial shipment.
  */
 @ApiModel(description = "An event related to a trial shipment.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:49.377-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:56.981-04:00")
 public class TrialShipmentEvent {
   @SerializedName("AmazonOrderId")
   private String amazonOrderId = null;

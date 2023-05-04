@@ -28,7 +28,7 @@ import java.io.IOException;
  * The reason for rejecting the order&#39;s regulated information. Not present if the order isn&#39;t rejected.
  */
 @ApiModel(description = "The reason for rejecting the order's regulated information. Not present if the order isn't rejected.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:44.667-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:51.478-04:00")
 public class RejectionReason {
   @SerializedName("RejectionReasonId")
   private String rejectionReasonId = null;

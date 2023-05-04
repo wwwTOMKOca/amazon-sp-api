@@ -31,7 +31,7 @@ import java.math.BigDecimal;
  * Item in the container.
  */
 @ApiModel(description = "Item in the container.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:53.947-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:28:02.003-04:00")
 public class ContainerItem {
   @SerializedName("quantity")
   private BigDecimal quantity = null;

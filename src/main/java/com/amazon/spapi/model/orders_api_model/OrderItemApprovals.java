@@ -33,7 +33,7 @@ import java.util.List;
  * List of item approvals gathered during the approval process.
  */
 @ApiModel(description = "List of item approvals gathered during the approval process.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:44.667-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:51.478-04:00")
 public class OrderItemApprovals {
   @SerializedName("OrderItemId")
   private String orderItemId = null;

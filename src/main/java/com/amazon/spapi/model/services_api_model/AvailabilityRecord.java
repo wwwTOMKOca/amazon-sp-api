@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
  * &#x60;AvailabilityRecord&#x60; to represent the capacity of a resource over a time range.
  */
 @ApiModel(description = "`AvailabilityRecord` to represent the capacity of a resource over a time range.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:46.175-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:53.305-04:00")
 public class AvailabilityRecord {
   @SerializedName("startTime")
   private OffsetDateTime startTime = null;

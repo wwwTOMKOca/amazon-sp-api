@@ -30,7 +30,7 @@ import java.io.IOException;
  * The response schema for the getPrepInstructions operation.
  */
 @ApiModel(description = "The response schema for the getPrepInstructions operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:37.437-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:43.557-04:00")
 public class GetPrepInstructionsResponse {
   @SerializedName("payload")
   private GetPrepInstructionsResult payload = null;

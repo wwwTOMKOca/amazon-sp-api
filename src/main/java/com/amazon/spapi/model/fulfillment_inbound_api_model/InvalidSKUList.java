@@ -24,7 +24,7 @@ import java.util.List;
  * A list of invalid SKU values and the reason they are invalid.
  */
 @ApiModel(description = "A list of invalid SKU values and the reason they are invalid.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:37.437-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:43.557-04:00")
 public class InvalidSKUList extends ArrayList<InvalidSKU> {
 
   @Override

@@ -28,7 +28,7 @@ import java.io.IOException;
  * Specifies the content type for the createFeedDocument operation.
  */
 @ApiModel(description = "Specifies the content type for the createFeedDocument operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:38.765-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:45.016-04:00")
 public class CreateFeedDocumentSpecification {
   @SerializedName("contentType")
   private String contentType = null;

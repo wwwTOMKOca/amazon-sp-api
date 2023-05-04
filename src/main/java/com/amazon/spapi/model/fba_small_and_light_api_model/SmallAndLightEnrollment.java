@@ -29,7 +29,7 @@ import java.io.IOException;
  * The Small and Light enrollment status of the item indicated by the specified seller SKU.
  */
 @ApiModel(description = "The Small and Light enrollment status of the item indicated by the specified seller SKU.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:48.533-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:55.903-04:00")
 public class SmallAndLightEnrollment {
   @SerializedName("marketplaceId")
   private String marketplaceId = null;

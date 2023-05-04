@@ -29,7 +29,7 @@ import java.io.IOException;
  * Request schema for the &#x60;assignAppointmentResources&#x60; operation.
  */
 @ApiModel(description = "Request schema for the `assignAppointmentResources` operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:46.175-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:53.305-04:00")
 public class AssignAppointmentResourcesRequest {
   @SerializedName("resources")
   private AppointmentResources resources = null;

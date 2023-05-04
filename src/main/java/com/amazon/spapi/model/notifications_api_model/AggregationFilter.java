@@ -29,7 +29,7 @@ import java.io.IOException;
  * Use this filter to select the aggregation time period at which to send notifications (e.g. limit to one notification every five minutes for high frequency notifications).
  */
 @ApiModel(description = "Use this filter to select the aggregation time period at which to send notifications (e.g. limit to one notification every five minutes for high frequency notifications).")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:51.459-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:59.274-04:00")
 public class AggregationFilter {
   @SerializedName("aggregationSettings")
   private AggregationSettings aggregationSettings = null;

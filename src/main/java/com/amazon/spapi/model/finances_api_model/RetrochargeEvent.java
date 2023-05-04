@@ -30,7 +30,7 @@ import java.io.IOException;
  * A retrocharge or retrocharge reversal.
  */
 @ApiModel(description = "A retrocharge or retrocharge reversal.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:49.377-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:56.981-04:00")
 public class RetrochargeEvent {
   @SerializedName("RetrochargeEventType")
   private String retrochargeEventType = null;

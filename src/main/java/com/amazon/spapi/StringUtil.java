@@ -13,7 +13,7 @@
 
 package com.amazon.spapi;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:53.947-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:28:02.003-04:00")
 public class StringUtil {
   /**
    * Check if the given array contains the given value (with case-insensitive comparison).
@@ -51,5 +51,15 @@ public class StringUtil {
       out.append(separator).append(array[i]);
     }
     return out.toString();
+  }
+
+  /**
+  * Check if the given value is null or an empty string
+  *
+  * @param value The value to check
+  * @return true if the value is null or empty
+  */
+  public static boolean isEmpty(String value) {
+    return value == null || value.isEmpty();
   }
 }

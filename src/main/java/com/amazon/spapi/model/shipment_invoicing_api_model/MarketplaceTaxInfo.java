@@ -29,7 +29,7 @@ import java.io.IOException;
  * Tax information about the marketplace.
  */
 @ApiModel(description = "Tax information about the marketplace.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:48.038-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:55.432-04:00")
 public class MarketplaceTaxInfo {
   @SerializedName("CompanyLegalName")
   private String companyLegalName = null;

@@ -24,7 +24,7 @@ import java.util.List;
  * A list of preparation instructions to help with item sourcing decisions.
  */
 @ApiModel(description = "A list of preparation instructions to help with item sourcing decisions.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:37.437-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:43.557-04:00")
 public class PrepInstructionList extends ArrayList<PrepInstruction> {
 
   @Override

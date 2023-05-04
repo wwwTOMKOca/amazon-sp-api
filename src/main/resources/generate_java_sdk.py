@@ -23,6 +23,7 @@ def log(message):
 def generate_java_sdk(models_path, swagger_codegen_path, output_path, api_package_name, model_package_name):
     log("Generating Java SDK...")
     model_subpackages = {}
+    mustache_templates_path = os.path.join(project_root, "src", "main", "resources", "selling-partner-api-models", "clients", "sellingpartner-api-aa-java", "resources", "swagger-codegen", "templates")
     for root, _, files in os.walk(models_path):
         sorted_files = sorted(files, reverse=True)
         for file in sorted_files:
@@ -37,6 +38,8 @@ def generate_java_sdk(models_path, swagger_codegen_path, output_path, api_packag
                 model_subpackages[os.path.splitext(file)[0]] = model_subpackage
                 
                 log(f"Processing {file}...")
+                log(f"      Generating from {json_file} into {output_directory}")
+
                 with open("generate_java_sdk.log", "a") as log_file:
                     subprocess.run([
                         "java",
@@ -47,7 +50,8 @@ def generate_java_sdk(models_path, swagger_codegen_path, output_path, api_packag
                         "-l", "java",
                         "--api-package", api_package_name,
                         "--model-package", f"{model_package_name}.{model_subpackage}",
-                        "-o", output_directory
+                        "-o", output_directory,
+                        "-t", mustache_templates_path  # Add mustache templates
                     ], stdout=log_file, stderr=log_file)
                 break
     return model_subpackages

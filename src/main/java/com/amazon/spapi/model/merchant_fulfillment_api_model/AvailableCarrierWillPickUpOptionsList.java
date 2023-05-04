@@ -24,7 +24,7 @@ import java.util.List;
  * List of available carrier pickup options.
  */
 @ApiModel(description = "List of available carrier pickup options.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:43.924-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:50.699-04:00")
 public class AvailableCarrierWillPickUpOptionsList extends ArrayList<AvailableCarrierWillPickUpOption> {
 
   @Override

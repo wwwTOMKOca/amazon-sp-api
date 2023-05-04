@@ -29,7 +29,7 @@ import java.io.IOException;
  * The request body for the updateVerificationStatus operation.
  */
 @ApiModel(description = "The request body for the updateVerificationStatus operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:44.667-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:51.478-04:00")
 public class UpdateVerificationStatusRequest {
   @SerializedName("regulatedOrderVerificationStatus")
   private UpdateVerificationStatusRequestBody regulatedOrderVerificationStatus = null;

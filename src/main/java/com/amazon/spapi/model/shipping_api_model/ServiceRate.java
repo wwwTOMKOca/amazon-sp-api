@@ -32,7 +32,7 @@ import java.io.IOException;
  * The specific rate for a shipping service, or null if no service available.
  */
 @ApiModel(description = "The specific rate for a shipping service, or null if no service available.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:53.947-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:28:02.003-04:00")
 public class ServiceRate {
   @SerializedName("totalCharge")
   private Currency totalCharge = null;

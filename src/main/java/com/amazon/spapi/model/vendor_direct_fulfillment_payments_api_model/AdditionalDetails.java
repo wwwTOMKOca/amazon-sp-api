@@ -28,7 +28,7 @@ import java.io.IOException;
  * A field where the selling party can provide additional information for tax-related or any other purposes.
  */
 @ApiModel(description = "A field where the selling party can provide additional information for tax-related or any other purposes.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:36.378-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:42.481-04:00")
 public class AdditionalDetails {
   /**
    * The type of the additional information provided by the selling party.

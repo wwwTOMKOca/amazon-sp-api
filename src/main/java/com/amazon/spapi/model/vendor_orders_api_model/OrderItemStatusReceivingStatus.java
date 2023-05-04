@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
  * Item receive status at the buyer&#39;s warehouse.
  */
 @ApiModel(description = "Item receive status at the buyer's warehouse.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:36.873-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:42.994-04:00")
 public class OrderItemStatusReceivingStatus {
   /**
    * Receive status of the line item.

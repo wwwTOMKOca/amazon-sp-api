@@ -31,7 +31,7 @@ import java.util.List;
  * Response schema for the &#x60;getRangeSlotCapacity&#x60; operation.
  */
 @ApiModel(description = "Response schema for the `getRangeSlotCapacity` operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:46.175-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:53.305-04:00")
 public class RangeSlotCapacity {
   @SerializedName("resourceId")
   private String resourceId = null;

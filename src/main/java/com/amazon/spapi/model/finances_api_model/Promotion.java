@@ -29,7 +29,7 @@ import java.io.IOException;
  * A promotion applied to an item.
  */
 @ApiModel(description = "A promotion applied to an item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:49.377-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:56.981-04:00")
 public class Promotion {
   @SerializedName("PromotionType")
   private String promotionType = null;

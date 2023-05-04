@@ -29,7 +29,7 @@ import java.io.IOException;
  * The request schema for the &#x60;createScheduledPackage&#x60; operation.
  */
 @ApiModel(description = "The request schema for the `createScheduledPackage` operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:42.498-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:49.111-04:00")
 public class CreateScheduledPackageRequest {
   @SerializedName("amazonOrderId")
   private String amazonOrderId = null;

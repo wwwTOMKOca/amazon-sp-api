@@ -31,7 +31,7 @@ import java.util.List;
  * The A+ Content standard fixed length list of text, usually presented as bullet points.
  */
 @ApiModel(description = "The A+ Content standard fixed length list of text, usually presented as bullet points.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:46.835-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:54.086-04:00")
 public class StandardTextListBlock {
   @SerializedName("textList")
   private List<TextItem> textList = new ArrayList<TextItem>();

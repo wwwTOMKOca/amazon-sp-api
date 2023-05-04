@@ -28,8 +28,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.lang.reflect.Type;
 import java.net.URLConnection;
 import java.net.URLEncoder;
@@ -52,6 +50,11 @@ import com.amazon.spapi.auth.HttpBasicAuth;
 import com.amazon.spapi.auth.ApiKeyAuth;
 import com.amazon.spapi.auth.OAuth;
 
+import com.amazon.SellingPartnerAPIAA.AWSSigV4Signer;
+import com.amazon.SellingPartnerAPIAA.LWAAuthorizationSigner;
+import com.google.common.util.concurrent.RateLimiter;
+import com.amazon.SellingPartnerAPIAA.RateLimitConfiguration;
+
 public class ApiClient {
 
     private String basePath = "https://sellingpartnerapi-na.amazon.com";
@@ -67,7 +70,6 @@ public class ApiClient {
     private int dateLength;
 
     private InputStream sslCaCert;
-    private boolean verifyingSsl;
     private KeyManager[] keyManagers;
 
     private OkHttpClient httpClient;
@@ -75,14 +77,17 @@ public class ApiClient {
 
     private HttpLoggingInterceptor loggingInterceptor;
 
+    private LWAAuthorizationSigner lwaAuthorizationSigner;
+    private AWSSigV4Signer awsSigV4Signer;
+    private RateLimiter rateLimiter;
+    private RateLimitConfiguration rateLimitConfiguration;
+
     /*
      * Constructor for ApiClient
      */
     public ApiClient() {
         httpClient = new OkHttpClient();
 
-
-        verifyingSsl = true;
 
         json = new JSON();
 
@@ -152,29 +157,6 @@ public class ApiClient {
      */
     public ApiClient setJSON(JSON json) {
         this.json = json;
-        return this;
-    }
-
-    /**
-     * True if isVerifyingSsl flag is on
-     *
-     * @return True if isVerifySsl flag is on
-     */
-    public boolean isVerifyingSsl() {
-        return verifyingSsl;
-    }
-
-    /**
-     * Configure whether to verify certificate and hostname when making https requests.
-     * Default to true.
-     * NOTE: Do NOT set to false in production code, otherwise you would face multiple types of cryptographic attacks.
-     *
-     * @param verifyingSsl True to verify TLS/SSL connection
-     * @return ApiClient
-     */
-    public ApiClient setVerifyingSsl(boolean verifyingSsl) {
-        this.verifyingSsl = verifyingSsl;
-        applySslSettings();
         return this;
     }
 
@@ -482,6 +464,45 @@ public class ApiClient {
         return this;
     }
 
+    /**
+     * Sets the LWAAuthorizationSigner
+     *
+     * @param lwaAuthorizationSigner LWAAuthorizationSigner instance
+     * @return Api client
+    */
+    public ApiClient setLWAAuthorizationSigner(LWAAuthorizationSigner lwaAuthorizationSigner) {
+        this.lwaAuthorizationSigner = lwaAuthorizationSigner;
+        return this;
+    }
+
+    /**
+     * Sets the AWSSigV4Signer
+     *
+     * @param awsSigV4Signer AWSSigV4Signer instance
+     * @return Api client
+     */
+     public ApiClient setAWSSigV4Signer(AWSSigV4Signer awsSigV4Signer) {
+          this.awsSigV4Signer = awsSigV4Signer;
+          return this;
+     }
+     
+    /**
+     * Sets the RateLimiter
+     * A rate limiter is used to manage a high volume of traffic allowing N requests per second
+     * @return Api client
+     */
+     public ApiClient setRateLimiter(RateLimitConfiguration rateLimitConfiguration) {
+          if (rateLimitConfiguration != null) {
+              rateLimiter = RateLimiter.create(rateLimitConfiguration.getRateLimitPermit());
+
+              //Add rateLimiter to httpclient interceptor for execute
+              RateLimitInterceptor rateLimiterInterceptor = new RateLimitInterceptor(rateLimiter, rateLimitConfiguration);
+              httpClient.interceptors().add(rateLimiterInterceptor);
+          }
+            return this;
+     }
+     
+     
     /**
      * Format the given parameter object into string.
      *
@@ -809,9 +830,9 @@ public class ApiClient {
         }
 
         if (tempFolderPath == null)
-            return Files.createTempFile(prefix, suffix).toFile();
+            return File.createTempFile(prefix, suffix);
         else
-            return Files.createTempFile(Paths.get(tempFolderPath), prefix, suffix).toFile();
+            return File.createTempFile(prefix, suffix, new File(tempFolderPath));
     }
 
     /**
@@ -961,7 +982,7 @@ public class ApiClient {
      * @param formParams The form parameters
      * @param authNames The authentications to apply
      * @param progressRequestListener Progress request listener
-     * @return The HTTP request
+     * @return The HTTP request 
      * @throws ApiException If fail to serialize the request body object
      */
     public Request buildRequest(String path, String method, List<Pair> queryParams, List<Pair> collectionQueryParams, Object body, Map<String, String> headerParams, Map<String, Object> formParams, String[] authNames, ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
@@ -1004,6 +1025,9 @@ public class ApiClient {
         } else {
             request = reqBuilder.method(method, reqBody).build();
         }
+
+        request = lwaAuthorizationSigner.sign(request);
+        request = awsSigV4Signer.sign(request);
 
         return request;
     }
@@ -1143,28 +1167,13 @@ public class ApiClient {
 
     /**
      * Apply SSL related settings to httpClient according to the current values of
-     * verifyingSsl and sslCaCert.
+     * sslCaCert.
      */
     private void applySslSettings() {
         try {
             TrustManager[] trustManagers = null;
             HostnameVerifier hostnameVerifier = null;
-            if (!verifyingSsl) {
-                TrustManager trustAll = new X509TrustManager() {
-                    @Override
-                    public void checkClientTrusted(X509Certificate[] chain, String authType) throws CertificateException {}
-                    @Override
-                    public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException {}
-                    @Override
-                    public X509Certificate[] getAcceptedIssuers() { return null; }
-                };
-                SSLContext sslContext = SSLContext.getInstance("TLS");
-                trustManagers = new TrustManager[]{ trustAll };
-                hostnameVerifier = new HostnameVerifier() {
-                    @Override
-                    public boolean verify(String hostname, SSLSession session) { return true; }
-                };
-            } else if (sslCaCert != null) {
+            if (sslCaCert != null) {
                 char[] password = null; // Any password will work.
                 CertificateFactory certificateFactory = CertificateFactory.getInstance("X.509");
                 Collection<? extends Certificate> certificates = certificateFactory.generateCertificates(sslCaCert);
@@ -1203,5 +1212,31 @@ public class ApiClient {
         } catch (IOException e) {
             throw new AssertionError(e);
         }
+    }
+}
+
+class RateLimitInterceptor implements Interceptor {
+    RateLimiter rateLimiter;
+    RateLimitConfiguration rateLimitConfiguration;
+
+    public RateLimitInterceptor(RateLimiter rateLimiter, RateLimitConfiguration rateLimitConfiguration) {
+        this.rateLimiter = rateLimiter;
+        this.rateLimitConfiguration = rateLimitConfiguration;
+    }
+
+    @Override
+    public Response intercept(Chain chain) throws IOException {
+        if (rateLimitConfiguration.getTimeOut() == Long.MAX_VALUE) {
+            rateLimiter.acquire();
+        } else {
+            try {
+                if (!rateLimiter.tryAcquire(rateLimitConfiguration.getTimeOut(), TimeUnit.MILLISECONDS)) {
+                    throw new ApiException("Throttled as per the ratelimiter on client");
+                }
+            } catch (ApiException e) {
+                e.printStackTrace();
+            }
+        }
+        return chain.proceed(chain.request());
     }
 }

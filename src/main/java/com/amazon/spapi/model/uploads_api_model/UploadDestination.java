@@ -28,7 +28,7 @@ import java.io.IOException;
  * Information about an upload destination.
  */
 @ApiModel(description = "Information about an upload destination.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:52.614-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:28:00.488-04:00")
 public class UploadDestination {
   @SerializedName("uploadDestinationId")
   private String uploadDestinationId = null;

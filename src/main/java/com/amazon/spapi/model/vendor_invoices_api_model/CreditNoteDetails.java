@@ -28,7 +28,7 @@ import java.io.IOException;
  * References required in order to process a credit note. This information is required only if InvoiceType is CreditNote.
  */
 @ApiModel(description = "References required in order to process a credit note. This information is required only if InvoiceType is CreditNote.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:39.230-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:45.492-04:00")
 public class CreditNoteDetails {
   @SerializedName("referenceInvoiceNumber")
   private String referenceInvoiceNumber = null;

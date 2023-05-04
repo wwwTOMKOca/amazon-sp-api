@@ -30,7 +30,7 @@ import java.io.IOException;
  * The available delivery confirmation options, and the fee charged, if any.
  */
 @ApiModel(description = "The available delivery confirmation options, and the fee charged, if any.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:43.924-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:50.699-04:00")
 public class AvailableDeliveryExperienceOption {
   @SerializedName("DeliveryExperienceOption")
   private DeliveryExperienceOption deliveryExperienceOption = null;

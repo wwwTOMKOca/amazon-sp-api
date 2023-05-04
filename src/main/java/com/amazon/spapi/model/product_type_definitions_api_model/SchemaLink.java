@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * SchemaLink
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:53.024-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:28:00.970-04:00")
 public class SchemaLink {
   @SerializedName("link")
   private SchemaLinkLink link = null;

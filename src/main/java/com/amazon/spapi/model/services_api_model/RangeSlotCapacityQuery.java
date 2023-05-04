@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Request schema for the &#x60;getRangeSlotCapacity&#x60; operation. This schema is used to define the time range and capacity types that are being queried.
  */
 @ApiModel(description = "Request schema for the `getRangeSlotCapacity` operation. This schema is used to define the time range and capacity types that are being queried.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:46.175-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:53.305-04:00")
 public class RangeSlotCapacityQuery {
   @SerializedName("capacityTypes")
   private List<CapacityType> capacityTypes = null;

@@ -30,7 +30,7 @@ import java.io.IOException;
  * An event related to the seller&#39;s Pay with Amazon account.
  */
 @ApiModel(description = "An event related to the seller's Pay with Amazon account.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:49.377-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:56.981-04:00")
 public class PayWithAmazonEvent {
   @SerializedName("SellerOrderId")
   private String sellerOrderId = null;

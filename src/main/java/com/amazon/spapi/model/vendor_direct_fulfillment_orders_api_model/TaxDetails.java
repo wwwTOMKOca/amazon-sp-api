@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * TaxDetails
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:35.089-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:41.148-04:00")
 public class TaxDetails {
   @SerializedName("taxRate")
   private String taxRate = null;

@@ -30,7 +30,7 @@ import java.io.IOException;
  * The request schema for the createShipment operation.
  */
 @ApiModel(description = "The request schema for the createShipment operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:53.947-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:28:02.003-04:00")
 public class CreateShipmentRequest {
   @SerializedName("clientReferenceId")
   private String clientReferenceId = null;

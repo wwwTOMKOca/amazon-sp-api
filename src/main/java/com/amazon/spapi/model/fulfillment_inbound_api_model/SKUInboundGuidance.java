@@ -30,7 +30,7 @@ import java.io.IOException;
  * Reasons why a given seller SKU is not recommended for shipment to Amazon&#39;s fulfillment network.
  */
 @ApiModel(description = "Reasons why a given seller SKU is not recommended for shipment to Amazon's fulfillment network.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:37.437-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:43.557-04:00")
 public class SKUInboundGuidance {
   @SerializedName("SellerSKU")
   private String sellerSKU = null;

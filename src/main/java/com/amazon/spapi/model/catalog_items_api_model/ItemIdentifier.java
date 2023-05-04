@@ -28,7 +28,7 @@ import java.io.IOException;
  * Identifier associated with the item in the Amazon catalog, such as a UPC or EAN identifier.
  */
 @ApiModel(description = "Identifier associated with the item in the Amazon catalog, such as a UPC or EAN identifier.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:47.498-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:54.867-04:00")
 public class ItemIdentifier {
   @SerializedName("identifierType")
   private String identifierType = null;

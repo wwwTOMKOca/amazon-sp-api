@@ -24,7 +24,7 @@ import java.util.List;
  * A list of &#x60;TaxWithholding&#x60; events.
  */
 @ApiModel(description = "A list of `TaxWithholding` events.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:49.377-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:56.981-04:00")
 public class TaxWithholdingEventList extends ArrayList<TaxWithholdingEvent> {
 
   @Override

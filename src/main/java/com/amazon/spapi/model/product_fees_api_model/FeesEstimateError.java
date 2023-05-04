@@ -29,7 +29,7 @@ import java.io.IOException;
  * An unexpected error occurred during this operation.
  */
 @ApiModel(description = "An unexpected error occurred during this operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:38.222-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:44.463-04:00")
 public class FeesEstimateError {
   @SerializedName("Type")
   private String type = null;

@@ -29,7 +29,7 @@ import java.io.IOException;
  * The response schema for the createConfirmOrderDetails operation.
  */
 @ApiModel(description = "The response schema for the createConfirmOrderDetails operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:40.181-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:46.685-04:00")
 public class CreateConfirmOrderDetailsResponse {
   @SerializedName("errors")
   private ErrorList errors = null;

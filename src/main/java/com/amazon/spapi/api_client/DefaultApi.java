@@ -21,6 +21,7 @@ import com.amazon.spapi.Configuration;
 import com.amazon.spapi.Pair;
 import com.amazon.spapi.ProgressRequestBody;
 import com.amazon.spapi.ProgressResponseBody;
+import com.amazon.spapi.StringUtil;
 
 import com.google.gson.reflect.TypeToken;
 
@@ -37,10 +38,20 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.amazon.SellingPartnerAPIAA.AWSAuthenticationCredentials;
+import com.amazon.SellingPartnerAPIAA.AWSAuthenticationCredentialsProvider;
+import com.amazon.SellingPartnerAPIAA.AWSAuthenticationCustomCredentialsProvider;
+import com.amazon.SellingPartnerAPIAA.AWSSigV4Signer;
+import com.amazon.SellingPartnerAPIAA.LWAAccessTokenCache;
+import com.amazon.SellingPartnerAPIAA.LWAAccessTokenCacheImpl;
+import com.amazon.SellingPartnerAPIAA.LWAAuthorizationCredentials;
+import com.amazon.SellingPartnerAPIAA.LWAAuthorizationSigner;
+import com.amazon.SellingPartnerAPIAA.RateLimitConfiguration;
+
 public class DefaultApi {
     private ApiClient apiClient;
 
-    public DefaultApi() {
+    DefaultApi() {
         this(Configuration.getDefaultApiClient());
     }
 
@@ -611,5 +622,104 @@ public class DefaultApi {
         Type localVarReturnType = new TypeToken<ListFinancialEventsResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
+    }
+
+    public static class Builder {
+        private AWSAuthenticationCredentials awsAuthenticationCredentials;
+        private LWAAuthorizationCredentials lwaAuthorizationCredentials;
+        private String endpoint;
+        private LWAAccessTokenCache lwaAccessTokenCache;
+        private Boolean disableAccessTokenCache = false;
+        private AWSAuthenticationCredentialsProvider awsAuthenticationCredentialsProvider;
+        private RateLimitConfiguration rateLimitConfiguration;
+        private AWSAuthenticationCustomCredentialsProvider awsAuthenticationCustomCredentialsProvider;
+
+        public Builder awsAuthenticationCredentials(AWSAuthenticationCredentials awsAuthenticationCredentials) {
+            this.awsAuthenticationCredentials = awsAuthenticationCredentials;
+            return this;
+        }
+
+        public Builder lwaAuthorizationCredentials(LWAAuthorizationCredentials lwaAuthorizationCredentials) {
+            this.lwaAuthorizationCredentials = lwaAuthorizationCredentials;
+            return this;
+        }
+
+        public Builder endpoint(String endpoint) {
+            this.endpoint = endpoint;
+            return this;
+        }
+        
+        public Builder lwaAccessTokenCache(LWAAccessTokenCache lwaAccessTokenCache) {
+            this.lwaAccessTokenCache = lwaAccessTokenCache;
+            return this;
+        }
+		
+	   public Builder disableAccessTokenCache() {
+            this.disableAccessTokenCache = true;
+            return this;
+        }
+        
+        public Builder awsAuthenticationCredentialsProvider(AWSAuthenticationCredentialsProvider awsAuthenticationCredentialsProvider) {
+            this.awsAuthenticationCredentialsProvider = awsAuthenticationCredentialsProvider;
+            return this;
+        }
+        
+        public Builder rateLimitConfigurationOnRequests(RateLimitConfiguration rateLimitConfiguration){
+            this.rateLimitConfiguration = rateLimitConfiguration;
+            return this;
+        }
+        
+        public Builder disableRateLimitOnRequests() {
+            this.rateLimitConfiguration = null;
+            return this;
+        }
+
+        public Builder awsAuthenticationCustomCredentialsProvider(AWSAuthenticationCustomCredentialsProvider awsAuthenticationCustomCredentialsProvider) {
+            this.awsAuthenticationCustomCredentialsProvider = awsAuthenticationCustomCredentialsProvider;
+            return this;
+        }
+        
+
+        public DefaultApi build() {
+            if (awsAuthenticationCredentials == null && awsAuthenticationCustomCredentialsProvider == null) {
+                throw new RuntimeException("Neither AWSAuthenticationCredentials or AWSAuthenticationCustomCredentialsProvider are set");
+            }
+
+            if (lwaAuthorizationCredentials == null) {
+                throw new RuntimeException("LWAAuthorizationCredentials not set");
+            }
+
+            if (StringUtil.isEmpty(endpoint)) {
+                throw new RuntimeException("Endpoint not set");
+            }
+
+            AWSSigV4Signer awsSigV4Signer;
+            if (awsAuthenticationCustomCredentialsProvider != null ) {
+                awsSigV4Signer = new AWSSigV4Signer(awsAuthenticationCustomCredentialsProvider);
+            }
+            else if (awsAuthenticationCredentialsProvider == null) {
+                awsSigV4Signer = new AWSSigV4Signer(awsAuthenticationCredentials);
+            }
+            else {
+                awsSigV4Signer = new AWSSigV4Signer(awsAuthenticationCredentials,awsAuthenticationCredentialsProvider);
+            }
+            
+            LWAAuthorizationSigner lwaAuthorizationSigner = null;            
+            if (disableAccessTokenCache) {
+                lwaAuthorizationSigner = new LWAAuthorizationSigner(lwaAuthorizationCredentials);
+            }
+            else {
+                if (lwaAccessTokenCache == null) {
+                    lwaAccessTokenCache = new LWAAccessTokenCacheImpl();                  
+                 }
+                 lwaAuthorizationSigner = new LWAAuthorizationSigner(lwaAuthorizationCredentials,lwaAccessTokenCache);
+            }
+
+            return new DefaultApi(new ApiClient()
+                .setAWSSigV4Signer(awsSigV4Signer)
+                .setLWAAuthorizationSigner(lwaAuthorizationSigner)
+                .setBasePath(endpoint)
+                .setRateLimiter(rateLimitConfiguration));
+        }
     }
 }

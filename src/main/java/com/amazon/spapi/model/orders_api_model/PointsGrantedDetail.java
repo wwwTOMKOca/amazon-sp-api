@@ -29,7 +29,7 @@ import java.io.IOException;
  * The number of Amazon Points offered with the purchase of an item, and their monetary value.
  */
 @ApiModel(description = "The number of Amazon Points offered with the purchase of an item, and their monetary value.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:44.667-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:51.478-04:00")
 public class PointsGrantedDetail {
   @SerializedName("PointsNumber")
   private Integer pointsNumber = null;

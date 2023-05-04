@@ -30,7 +30,7 @@ import java.io.IOException;
  * The response of fetching appointment slots based on service context.
  */
 @ApiModel(description = "The response of fetching appointment slots based on service context.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:46.175-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:53.305-04:00")
 public class GetAppointmentSlotsResponse {
   @SerializedName("payload")
   private AppointmentSlotReport payload = null;

@@ -30,7 +30,7 @@ import java.io.IOException;
  * The payload schema for the purchaseLabels operation.
  */
 @ApiModel(description = "The payload schema for the purchaseLabels operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:53.947-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:28:02.003-04:00")
 public class PurchaseLabelsResult {
   @SerializedName("shipmentId")
   private String shipmentId = null;

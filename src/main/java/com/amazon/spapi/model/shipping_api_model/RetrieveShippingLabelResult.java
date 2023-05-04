@@ -29,7 +29,7 @@ import java.io.IOException;
  * The payload schema for the retrieveShippingLabel operation.
  */
 @ApiModel(description = "The payload schema for the retrieveShippingLabel operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:53.947-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:28:02.003-04:00")
 public class RetrieveShippingLabelResult {
   @SerializedName("labelStream")
   private String labelStream = null;

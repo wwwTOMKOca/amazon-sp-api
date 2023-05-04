@@ -23,7 +23,7 @@ import java.util.List;
  * A set of content reference keys.
  */
 @ApiModel(description = "A set of content reference keys.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:46.835-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:54.086-04:00")
 public class ContentReferenceKeySet extends ArrayList<String> {
 
   @Override

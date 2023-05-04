@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * Container
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:50.884-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:58.519-04:00")
 public class Container {
   /**
    * The type of container.

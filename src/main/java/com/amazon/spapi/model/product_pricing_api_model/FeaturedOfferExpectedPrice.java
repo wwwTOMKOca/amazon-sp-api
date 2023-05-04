@@ -30,7 +30,7 @@ import java.io.IOException;
  * The item price at or below which the target offer may be featured.
  */
 @ApiModel(description = "The item price at or below which the target offer may be featured.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:41.182-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:47.660-04:00")
 public class FeaturedOfferExpectedPrice {
   @SerializedName("listingPrice")
   private MoneyType listingPrice = null;

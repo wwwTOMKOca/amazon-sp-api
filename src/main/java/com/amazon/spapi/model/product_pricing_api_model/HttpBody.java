@@ -23,7 +23,7 @@ import java.util.Map;
  * Additional HTTP body information associated with an individual request within a batch.
  */
 @ApiModel(description = "Additional HTTP body information associated with an individual request within a batch.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:41.182-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:47.660-04:00")
 public class HttpBody extends HashMap<String, Object> {
 
   @Override

@@ -29,7 +29,7 @@ import java.math.BigDecimal;
  * A set of measurements for a three-dimensional object.
  */
 @ApiModel(description = "A set of measurements for a three-dimensional object.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:53.947-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:28:02.003-04:00")
 public class Dimensions {
   @SerializedName("length")
   private BigDecimal length = null;

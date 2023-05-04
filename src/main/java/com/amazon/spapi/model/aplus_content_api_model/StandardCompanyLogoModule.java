@@ -29,7 +29,7 @@ import java.io.IOException;
  * The standard company logo image.
  */
 @ApiModel(description = "The standard company logo image.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:46.835-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:54.086-04:00")
 public class StandardCompanyLogoModule {
   @SerializedName("companyLogo")
   private ImageComponent companyLogo = null;

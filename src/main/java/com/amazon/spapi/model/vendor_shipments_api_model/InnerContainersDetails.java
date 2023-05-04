@@ -31,7 +31,7 @@ import java.util.List;
  * Details of the innerContainersDetails.
  */
 @ApiModel(description = "Details of the innerContainersDetails.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:51.985-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:59.848-04:00")
 public class InnerContainersDetails {
   @SerializedName("containerCount")
   private Integer containerCount = null;

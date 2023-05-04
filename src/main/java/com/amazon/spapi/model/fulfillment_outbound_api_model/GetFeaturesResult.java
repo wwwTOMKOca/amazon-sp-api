@@ -29,7 +29,7 @@ import java.io.IOException;
  * The payload for the getFeatures operation.
  */
 @ApiModel(description = "The payload for the getFeatures operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:35.643-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:41.721-04:00")
 public class GetFeaturesResult {
   @SerializedName("features")
   private Features features = null;

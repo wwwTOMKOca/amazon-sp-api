@@ -24,7 +24,7 @@ import java.util.List;
  * An array of invalid return item information.
  */
 @ApiModel(description = "An array of invalid return item information.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:35.643-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:41.721-04:00")
 public class InvalidReturnItemList extends ArrayList<InvalidReturnItem> {
 
   @Override

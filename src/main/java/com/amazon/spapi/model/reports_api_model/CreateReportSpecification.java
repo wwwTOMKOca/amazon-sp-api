@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Information required to create the report.
  */
 @ApiModel(description = "Information required to create the report.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:43.045-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:49.632-04:00")
 public class CreateReportSpecification {
   @SerializedName("reportOptions")
   private ReportOptions reportOptions = null;

@@ -24,7 +24,7 @@ import java.util.List;
  * List of marketplace participations.
  */
 @ApiModel(description = "List of marketplace participations.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:50.465-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:58.092-04:00")
 public class MarketplaceParticipationList extends ArrayList<MarketplaceParticipation> {
 
   @Override

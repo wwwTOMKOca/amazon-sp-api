@@ -23,7 +23,7 @@ import java.util.Map;
  * A mapping of additional HTTP headers to send/receive for an individual request within a batch.
  */
 @ApiModel(description = "A mapping of additional HTTP headers to send/receive for an individual request within a batch.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:41.182-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:47.660-04:00")
 public class HttpHeaders extends HashMap<String, String> {
 
   @Override

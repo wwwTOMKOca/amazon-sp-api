@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * TransactionId
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:35.089-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:41.148-04:00")
 public class TransactionId {
   @SerializedName("transactionId")
   private String transactionId = null;

@@ -29,7 +29,7 @@ import java.io.IOException;
  * This object allows users to specify an order to be scheduled. Only the amazonOrderId is required. 
  */
 @ApiModel(description = "This object allows users to specify an order to be scheduled. Only the amazonOrderId is required. ")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:42.498-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:49.111-04:00")
 public class OrderScheduleDetails {
   @SerializedName("amazonOrderId")
   private String amazonOrderId = null;

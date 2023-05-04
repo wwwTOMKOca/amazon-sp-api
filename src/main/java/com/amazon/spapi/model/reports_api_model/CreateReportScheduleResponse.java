@@ -28,7 +28,7 @@ import java.io.IOException;
  * Response schema.
  */
 @ApiModel(description = "Response schema.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:43.045-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:49.632-04:00")
 public class CreateReportScheduleResponse {
   @SerializedName("reportScheduleId")
   private String reportScheduleId = null;

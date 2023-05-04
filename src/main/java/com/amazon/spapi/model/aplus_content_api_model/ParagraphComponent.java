@@ -31,7 +31,7 @@ import java.util.List;
  * A list of rich text content, usually presented in a text box.
  */
 @ApiModel(description = "A list of rich text content, usually presented in a text box.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:46.835-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:54.086-04:00")
 public class ParagraphComponent {
   @SerializedName("textList")
   private List<TextComponent> textList = new ArrayList<TextComponent>();

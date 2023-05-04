@@ -31,7 +31,7 @@ import java.util.List;
  * The request schema for the sendInvoice operation.
  */
 @ApiModel(description = "The request schema for the sendInvoice operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:40.181-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:46.685-04:00")
 public class InvoiceRequest {
   @SerializedName("attachments")
   private List<Attachment> attachments = null;

@@ -39,7 +39,7 @@ import org.threeten.bp.OffsetDateTime;
  * The job details of a service.
  */
 @ApiModel(description = "The job details of a service.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:46.175-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:53.305-04:00")
 public class ServiceJob {
   @SerializedName("createTime")
   private OffsetDateTime createTime = null;

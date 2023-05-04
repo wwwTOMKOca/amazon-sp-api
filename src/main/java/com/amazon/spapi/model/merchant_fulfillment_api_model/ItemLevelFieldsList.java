@@ -24,7 +24,7 @@ import java.util.List;
  * A list of item level fields.
  */
 @ApiModel(description = "A list of item level fields.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:43.924-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:50.699-04:00")
 public class ItemLevelFieldsList extends ArrayList<ItemLevelFields> {
 
   @Override

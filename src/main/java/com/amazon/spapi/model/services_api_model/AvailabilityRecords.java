@@ -24,7 +24,7 @@ import java.util.List;
  * List of &#x60;AvailabilityRecord&#x60;s to represent the capacity of a resource over a time range.
  */
 @ApiModel(description = "List of `AvailabilityRecord`s to represent the capacity of a resource over a time range.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:46.175-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:53.305-04:00")
 public class AvailabilityRecords extends ArrayList<AvailabilityRecord> {
 
   @Override

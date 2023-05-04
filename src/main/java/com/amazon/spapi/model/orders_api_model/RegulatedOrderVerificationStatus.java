@@ -32,7 +32,7 @@ import java.util.List;
  * The verification status of the order along with associated approval or rejection metadata.
  */
 @ApiModel(description = "The verification status of the order along with associated approval or rejection metadata.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:44.667-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:51.478-04:00")
 public class RegulatedOrderVerificationStatus {
   @SerializedName("Status")
   private VerificationStatus status = null;

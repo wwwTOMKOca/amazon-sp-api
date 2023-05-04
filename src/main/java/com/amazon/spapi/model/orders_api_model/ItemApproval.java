@@ -29,7 +29,7 @@ import java.io.IOException;
  * Generic item approval. Check the applicable restrictions at the specific approval type schemas.
  */
 @ApiModel(description = "Generic item approval. Check the applicable restrictions at the specific approval type schemas.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:44.667-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:51.478-04:00")
 public class ItemApproval {
   @SerializedName("SequenceId")
   private Integer sequenceId = null;

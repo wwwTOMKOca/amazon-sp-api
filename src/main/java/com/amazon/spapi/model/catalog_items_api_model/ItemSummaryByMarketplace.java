@@ -33,7 +33,7 @@ import org.threeten.bp.LocalDate;
  * Summary details of an Amazon catalog item for the indicated Amazon marketplace.
  */
 @ApiModel(description = "Summary details of an Amazon catalog item for the indicated Amazon marketplace.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:47.498-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:54.867-04:00")
 public class ItemSummaryByMarketplace {
   @SerializedName("marketplaceId")
   private String marketplaceId = null;

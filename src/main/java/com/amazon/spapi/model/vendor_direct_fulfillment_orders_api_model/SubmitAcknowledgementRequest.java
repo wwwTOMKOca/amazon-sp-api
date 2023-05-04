@@ -31,7 +31,7 @@ import java.util.List;
  * The request schema for the submitAcknowledgement operation.
  */
 @ApiModel(description = "The request schema for the submitAcknowledgement operation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:35.089-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:41.148-04:00")
 public class SubmitAcknowledgementRequest {
   @SerializedName("orderAcknowledgements")
   private List<OrderAcknowledgementItem> orderAcknowledgements = null;

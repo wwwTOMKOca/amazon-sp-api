@@ -24,7 +24,7 @@ import java.util.List;
  * Issues associated with the listings item.
  */
 @ApiModel(description = "Issues associated with the listings item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:55.009-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:28:03.156-04:00")
 public class ItemIssues extends ArrayList<Issue> {
 
   @Override

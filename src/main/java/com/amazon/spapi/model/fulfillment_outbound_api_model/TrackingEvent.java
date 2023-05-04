@@ -30,7 +30,7 @@ import java.io.IOException;
  * Information for tracking package deliveries.
  */
 @ApiModel(description = "Information for tracking package deliveries.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:35.643-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:41.721-04:00")
 public class TrackingEvent {
   @SerializedName("eventDate")
   private String eventDate = null;

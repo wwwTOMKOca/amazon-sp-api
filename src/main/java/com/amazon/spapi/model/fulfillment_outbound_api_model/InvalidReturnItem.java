@@ -29,7 +29,7 @@ import java.io.IOException;
  * An item that is invalid for return.
  */
 @ApiModel(description = "An item that is invalid for return.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:35.643-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:41.721-04:00")
 public class InvalidReturnItem {
   @SerializedName("sellerReturnItemId")
   private String sellerReturnItemId = null;

@@ -29,7 +29,7 @@ import java.math.BigDecimal;
  * The total value of all items in the container.
  */
 @ApiModel(description = "The total value of all items in the container.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:53.947-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:28:02.003-04:00")
 public class Currency {
   @SerializedName("value")
   private BigDecimal value = null;

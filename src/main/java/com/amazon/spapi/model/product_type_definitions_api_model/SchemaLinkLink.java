@@ -28,7 +28,7 @@ import java.io.IOException;
  * Link to retrieve the schema.
  */
 @ApiModel(description = "Link to retrieve the schema.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:53.024-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:28:00.970-04:00")
 public class SchemaLinkLink {
   @SerializedName("resource")
   private String resource = null;

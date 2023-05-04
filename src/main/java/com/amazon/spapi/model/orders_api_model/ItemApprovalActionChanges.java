@@ -30,7 +30,7 @@ import java.io.IOException;
  * Changes required for the approval. Each approval type defines the allowed changes valid sub-set in its specific schema.
  */
 @ApiModel(description = "Changes required for the approval. Each approval type defines the allowed changes valid sub-set in its specific schema.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:44.667-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:51.478-04:00")
 public class ItemApprovalActionChanges {
   @SerializedName("ItemPrice")
   private Money itemPrice = null;

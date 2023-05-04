@@ -30,7 +30,7 @@ import java.io.IOException;
  * A standard headline and body text with an image on the side.
  */
 @ApiModel(description = "A standard headline and body text with an image on the side.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:46.835-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:54.086-04:00")
 public class StandardSingleSideImageModule {
   @SerializedName("imagePositionType")
   private PositionType imagePositionType = null;

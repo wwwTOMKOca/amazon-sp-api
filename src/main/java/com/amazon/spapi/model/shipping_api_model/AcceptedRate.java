@@ -32,7 +32,7 @@ import java.io.IOException;
  * The specific rate purchased for the shipment, or null if unpurchased.
  */
 @ApiModel(description = "The specific rate purchased for the shipment, or null if unpurchased.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:53.947-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:28:02.003-04:00")
 public class AcceptedRate {
   @SerializedName("totalCharge")
   private Currency totalCharge = null;

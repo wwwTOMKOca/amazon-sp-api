@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * The total estimated fees for an item and a list of details.
  */
 @ApiModel(description = "The total estimated fees for an item and a list of details.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:38.222-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:44.463-04:00")
 public class FeesEstimate {
   @SerializedName("TimeOfFeesEstimation")
   private OffsetDateTime timeOfFeesEstimation = null;

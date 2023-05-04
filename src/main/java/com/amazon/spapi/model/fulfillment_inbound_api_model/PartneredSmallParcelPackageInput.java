@@ -30,7 +30,7 @@ import java.io.IOException;
  * Dimension and weight information for the package.
  */
 @ApiModel(description = "Dimension and weight information for the package.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:37.437-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:43.557-04:00")
 public class PartneredSmallParcelPackageInput {
   @SerializedName("Dimensions")
   private Dimensions dimensions = null;

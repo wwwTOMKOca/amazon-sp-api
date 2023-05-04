@@ -30,7 +30,7 @@ import java.io.IOException;
  * Indicates whether the carrier will pick up the package, and what fee is charged, if any.
  */
 @ApiModel(description = "Indicates whether the carrier will pick up the package, and what fee is charged, if any.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:43.924-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:50.699-04:00")
 public class AvailableCarrierWillPickUpOption {
   @SerializedName("CarrierWillPickUpOption")
   private CarrierWillPickUpOption carrierWillPickUpOption = null;

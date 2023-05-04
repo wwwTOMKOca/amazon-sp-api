@@ -30,7 +30,7 @@ import java.util.List;
  * An Amazon product type with a definition available.
  */
 @ApiModel(description = "An Amazon product type with a definition available.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:53.024-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:28:00.970-04:00")
 public class ProductType {
   @SerializedName("name")
   private String name = null;

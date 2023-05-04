@@ -28,7 +28,7 @@ import java.io.IOException;
  * The shipping address for the service job.
  */
 @ApiModel(description = "The shipping address for the service job.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T21:37:46.175-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-03T23:27:53.305-04:00")
 public class Address {
   @SerializedName("name")
   private String name = null;
